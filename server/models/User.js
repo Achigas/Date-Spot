@@ -21,8 +21,8 @@ const userSchema = new Schema(
       required: true,
     },
     //place holder for saved data
-    savedDates: [dateSchema],
-  },
+  //   savedDates: [dateSchema],
+ },
   // set this to use virtual below
   {
     toJSON: {
