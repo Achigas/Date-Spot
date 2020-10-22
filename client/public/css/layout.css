@@ -24,12 +24,11 @@ html, body {
 
 header {
    position: relative;
-   height: 775px;
-   min-height: 500px;
+   height: 800px;
+   min-height: 400px;
    width: 100%;
-   background: #161415 url(../images/header-background.jpg) no-repeat top center;
-   background-size: cover !important;
-	-webkit-background-size: cover !important;
+   background: grey url(../images/header-background.png) no-repeat top center;
+   background-size: 900px 700px;
    text-align: center;
    overflow: hidden;
 }
@@ -52,43 +51,21 @@ header .banner {
 
 header .banner-text { width: 100%; }
 header .banner-text h1 {
-   font: 90px/1.1em 'opensans-bold', sans-serif;
+   font: 40px/1.1em 'opensans-bold', sans-serif;
    color: #fff;
    letter-spacing: -2px;
-   margin: -20% auto 8px auto;
+   margin: 60% auto 8px auto;
    text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
 }
 header .banner-text h3 {
-   font: 17px/1.6em 'librebaskerville-regular', serif;
-   color: black;
+   font: 20px/1.6em 'librebaskerville-regular', serif;
+   color: #fff;
    margin: 0 auto;
    width: 70%;
    text-shadow: 0px 1px 2px rgba(0, 0, 0, .3);
 }
 
 
-
-/* scrolldown link */
-header .scrolldown a {
-   position: absolute;
-   bottom: 40px;
-   left: 50%;
-   margin-left: -29px;
-   color: #fff;
-   display: block;
-   height: 42px;
-   width: 42px;
-   font-size: 42px;
-   line-height: 42px;
-   color: #fff;
-   border-radius: 100%;
-
-   -webkit-transition: all .3s ease-in-out;
-   -moz-transition: all .3s ease-in-out;
-   -o-transition: all .3s ease-in-out;
-   transition: all .3s ease-in-out;
-}
-header .scrolldown a:hover { color:#11ABB0; }
 
 /* primary navigation
 --------------------------------------------------------------------- */
@@ -154,225 +131,74 @@ ul#nav li a:hover { color: yellow}
 
 
 /* ------------------------------------------------------------------ */
-/* c. About Section
+/* c. Spots Section
 /* ------------------------------------------------------------------ */
 
-#about {
+#spots {
+   background: #333;
+   padding-top: 96px;
+   padding-bottom: 80px;
+}
+
+
+#spots h1 {
+   font: 35px/1.1em 'opensans-bold', sans-serif;
+   color: #fff;
+   letter-spacing: -2px;
+   margin: 0% auto 8px auto;
+   text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
+   text-align: center;
+}
+
+
+/* ------------------------------------------------------------------ */
+/* c. Saved Page
+/* ------------------------------------------------------------------ */
+
+#food {
    background: #2B2B2B;
    padding-top: 96px;
    padding-bottom: 80px;
 }
 
 
-#about h2 {
+#food h2 {
    font: 40px/28px 'opensans-bold', sans-serif;
    color: #fff;
    margin-bottom: 12%;
 }
-#about p {
+#food p {
    line-height: 30px;
    color: #878383;
    text-align: justify;
 }
-#about .profile-pic {
-   height: 530px;
-   margin-top: 20%;
-}
-#about .main-col { padding-right: 2%; }
-
 
 
 /* ------------------------------------------------------------------ */
-/* d. Web Section
-/* ------------------------------------------------------------------ */
-#web {
-   background: #fff;
-   padding-top: 90px;
-   padding-bottom: 60px;
-   overflow: hidden;
-}
-
-
-
-#web h1 {
-   font: 20px/24px 'opensans-bold', sans-serif;
-   text-transform: uppercase;
-   letter-spacing: 1px;
-}
-#web h1 span {
-   border-bottom: 3px solid #11ABB0;
-   padding-bottom: 6px;
-}
-#web h2 {
-   font: 40px/28px 'opensans-bold', sans-serif;
-   padding-top: 8px;
-   margin-bottom: 5%;
-}
-
-#web h3 {
-   font: 20px/26px 'opensans-bold', sans-serif;
-   padding-top: 10px;
-}
-
-#web .header-col { padding-top: 9px; }
-#web .main-col { padding-right: .5%; }
-
- .work {
-   margin-bottom: 48px;
-   padding-bottom: 24px;
-   border-bottom: 1px solid #E8E8E8;
-}
-
-.skills {
-   font-size: 14px;
-}
-
-.design {
-   margin-bottom:3%;
-}
-.projects {
-      margin-bottom: 48px;
-      padding-bottom: 24px;
-      border-bottom: 1px solid #E8E8E8;
-}
-
-
-.portfolioimage {
-   height: 400px;
-   width: 800px;
-}
-
-.secondProject {
-   margin-left: 25%;
-}
-
-.buttons {
-   padding-bottom: 5%;
-}
-.button {
-   margin-left: 5px;
-   outline:"none";
-}
-.button:active {
-   outline:"none";
-}
-.button:focus{
-   outline:0;
-}
-#web .info {
-   font: 15px/24px;
-   color: #6E7881;
-   margin-bottom: 25px;
-   margin-top: 15px;
-   line-height: 30px;
-   text-align: justify;
-}
-#web .cardText {
-   font: 16px/24px;
-   color: #6E7881;
-   margin-bottom: 25px;
-   margin-top: 15px;
-   line-height: 30px;
-   text-align: justify;
-}
-#web .info span {
-   margin-right: 5px;
-   margin-left: 5px;
-}
-
-/* ------------------------------------------------------------------ */
-/* e. Content Section
+/* d. Login Page
 /* ------------------------------------------------------------------ */
 
-#portfolio {
-   background: #ebeeee;
-   padding-top: 90px;
-   padding-bottom: 60px;
-}
-
-/* Portfolio Content */
-.container {
-   display: grid;
-}
-#portfolio-wrapper .columns { padding-bottom: 10px;}
-.portfolio-item .item-wrap {
-   margin-bottom: -5%;
-   margin-left: -3%;
-}
-
-#portfolio h2 {
-   font: 40px/28px 'opensans-bold', sans-serif;
-   padding-top: 5px;
-   margin-bottom: 12px;
+#food {
+   background: #2B2B2B;
+   padding-top: 96px;
+   padding-bottom: 80px;
 }
 
 
-
-video::-webkit-media-controls-panel {
-   display: flex !important;
-   opacity: .5 !important;
-}
-
-.content-button {
-   margin-top: 5%;
-   margin-bottom: 2%;
-}
-/* ------------------------------------------------------------------
-/* f. Photography
-/* ------------------------------------------------------------------ */
-
-#photography {
-   background: #1F1F1F url(../images/background.jpg) no-repeat center center;
-   background-size: cover !important;
-	-webkit-background-size: cover !important;
-   background-attachment: fixed;
-
-   position: relative;
-   min-height: 400px;
-   width: 100%;
-   overflow: hidden;
-   padding-bottom: 100px;
-}
-
-#photography h2 {
-   font: 40px/28px 'opensans-bold', sans-serif;
-   margin-bottom: 4%;
-   padding-top: 90px;
-}
-
-.photo-button {
-   margin-top: 5%;
-}
-
-/* ------------------------------------------------------------------ */
-/* g. Contact Section
-/* ------------------------------------------------------------------ */
-
-#contact {
-   background: #191919;
-   padding-top: 205px;
-   padding-bottom: 100px;
-   color: #636363;
-}
-
-#contact h2 {
+#food h2 {
    font: 40px/28px 'opensans-bold', sans-serif;
    color: #fff;
-   margin-bottom: 5%;
-   margin-top: -5%;
+   margin-bottom: 12%;
+}
+#food p {
+   line-height: 30px;
+   color: #878383;
+   text-align: justify;
 }
 
-#contact p, .email {
-   font: 15px/25px 'opensans-semibold', sans-serif;
-}
-
-.logo {
-   padding-top: 15px;
-   height: 30px;
-}
 
 /* ------------------------------------------------------------------ */
-/* h. Footer
+/* e. Footer
 /* ------------------------------------------------------------------ */
 
 footer {
@@ -410,52 +236,6 @@ footer .copyright li:before {
 footer .copyright  li:first-child:before {
     display: none;
 }
-
-/* social links */
-footer .social-links {
-   margin: 18px 0 30px 0;
-   padding: 0;
-   font-size: 30px;
-}
-footer .social-links li {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    margin-left: 42px;
-    color: black;
-}
-
-footer .social-links li:first-child { margin-left: 0; }
-
-
-
-/* Go To Top Button */
-#go-top {
-	position: absolute;
-	top: -24px;
-   left: 50%;
-   margin-left: -30px;
-}
-#go-top a {
-	text-decoration: none;
-	border: 0 none;
-	display: block;
-	width: 60px;
-	height: 60px;
-	background-color: #525252;
-
-	-webkit-transition: all 0.2s ease-in-out;
-   -moz-transition: all 0.2s ease-in-out;
-   -o-transition: all 0.2s ease-in-out;
-   -ms-transition: all 0.2s ease-in-out;
-   transition: all 0.2s ease-in-out;
-
-   color: #fff;
-   font-size: 21px;
-   line-height: 60px;
- 	border-radius: 100%;
-}
-#go-top a:hover { background-color: #0F9095; }
 
 
 /* 
@@ -753,18 +533,7 @@ header .banner-text h1 {
   footer .copyright li:before { content: none; }
   footer .copyright li { margin-right: 12px; }
 
-  /* social links */
-  footer .social-links { font-size: 22px; color: black; }
-  footer .social-links li { margin-left: 18px; }
 
-  /* Go To Top Button */
-  #go-top { margin-left: -22px; }
-  #go-top a {
-     width: 54px;
-     height: 54px;
-     font-size: 18px;
-     line-height: 54px;
-  }
 
 
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 function Header () {
     return (
       <header id="home">
@@ -11,19 +10,17 @@ function Header () {
 	      <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
 
          <ul id="nav" className="nav">
-            <li><a className="smoothscroll" href="#home">Home</a></li>
-            <li><a className="smoothscroll" href="#about">Food Spots</a></li>
-	         <li><a className="smoothscroll" href="#web">Movie Spots</a></li>
-            <li><a className="smoothscroll" href="#portfolio">Saved Spots</a></li>
-            <li><a className="smoothscroll" href="#portfolio">Log In</a></li>
-            <li><a className="smoothscroll" href="#portfolio">Sign Up</a></li>
+            <li className="current"><a className="smoothscroll" href="#home">Home</a></li>
+            <li><a className="smoothscroll" href="#saved">Saved Spots</a></li>
+            <li><a className="smoothscroll" href="#login">Log In</a></li>
          </ul>
 
       </nav>
 
       <div className="row banner">
          <div className="banner-text">
-             
+               <h1>Find your next date idea!</h1>
+               <h3>Scroll down to start.</h3>
              </div>
              </div>
 
