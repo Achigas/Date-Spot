@@ -127,7 +127,7 @@ ul#nav li a {
 }
 
 
-ul#nav li a:hover { color: yellow}
+ul#nav li a:hover { color: rgba(255, 255, 0, 0.675)}
 
 
 /* ------------------------------------------------------------------ */
@@ -142,7 +142,7 @@ ul#nav li a:hover { color: yellow}
 
 
 #spots h1 {
-   font: 35px/1.1em 'opensans-bold', sans-serif;
+   font: 30px/1.1em 'opensans-bold', sans-serif;
    color: #fff;
    letter-spacing: -2px;
    margin: 0% auto 8px auto;
@@ -150,6 +150,13 @@ ul#nav li a:hover { color: yellow}
    text-align: center;
 }
 
+#dropdown-basic {
+   background-color: rgba(255, 255, 0, 0.675);
+}
+
+.dropdownButton {
+   align-items: center;
+}
 
 /* ------------------------------------------------------------------ */
 /* c. Saved Page
