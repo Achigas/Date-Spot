@@ -156,7 +156,9 @@ ul#nav li a:hover { color: rgba(255, 255, 0, 0.675)}
 }
 
 .dropdownItem {
-   padding-right: 200px;
+  margin-right: 3%;
+   color: #fff;
+
 }
 
 .dropdownButton {
@@ -178,6 +180,14 @@ ul#nav li a:hover { color: rgba(255, 255, 0, 0.675)}
  .dateSpot {
    text-align: center;
  }
+
+ .dateCards {
+    display: flex;
+    margin-top: 5%;
+    text-align: left;
+    margin-left: 35%;
+ }
+
 
 /* ------------------------------------------------------------------ */
 /* c. Saved Page
