@@ -1,5 +1,6 @@
-import React from 'react';
+import React from "react";
 import Dropdown from 'react-bootstrap/Dropdown';
+
 
 
 function Spots() {
@@ -19,8 +20,13 @@ function Spots() {
   </Dropdown.Menu>
    </Dropdown>
   </div>
+  <div className="dateSpot">
+  <span className="dot"></span>
+  <span className="dot"></span>
+  </div>
   </section>
   );
 }
 
 export default Spots;
+
