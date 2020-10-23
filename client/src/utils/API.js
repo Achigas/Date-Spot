@@ -1,4 +1,5 @@
 var APIKeyMovieDB = "4ee2048f656df52ca79c1b3928871706"
+const ZomatoAPI = "c209bc4f98e550ee1bf34b732bd7faad"
 
 export const getMe = (token) => {
     return fetch('/api/users/me', {
@@ -56,5 +57,17 @@ export const getMe = (token) => {
   //};
 
 export const searchNowPlayingMovies = () => {
-    return fetch('https://api.themoviedb.org/3/movie/now_playing?api_key=4ee2048f656df52ca79c1b3928871706&language=en-US&page=1')
+    //random page number
+    const pageNumber = Math.floor(Math.random() * Math.floor(5)) + 1
+    //take out API key
+    return fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=4ee2048f656df52ca79c1b3928871706&language=en-US&page=${pageNumber}`)
+}
+
+export const searchPopularMovies = () => {
+  const pageNumber = Math.floor(Math.random() * Math.floor(10)) + 1
+  return fetch(`https://api.themoviedb.org/3/movie/popular?api_key=4ee2048f656df52ca79c1b3928871706&language=en-US&page=${pageNumber}`)
+}
+
+export const getGenreInfo = () => {
+  return fetch ("https://api.themoviedb.org/3/genre/movie/list?api_key=" + APIKeyMovieDB + "&language=en-US")
 }
