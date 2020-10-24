@@ -54,7 +54,7 @@ header .banner-text h1 {
    font: 40px/1.1em 'opensans-bold', sans-serif;
    color: #fff;
    letter-spacing: -2px;
-   margin: 55% auto 8px auto;
+   margin: 65% auto 8px auto;
    text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
 }
 header .banner-text h3 {
@@ -223,22 +223,20 @@ ul#nav li a:hover { color: rgba(255, 255, 0, 0.675)}
 /* c. Saved Page
 /* ------------------------------------------------------------------ */
 
-#food {
-   background: #2B2B2B;
+
+#saved {
    padding-top: 96px;
-   padding-bottom: 80px;
+   padding-bottom: 96px;
 }
 
 
-#food h2 {
-   font: 40px/28px 'opensans-bold', sans-serif;
-   color: #fff;
-   margin-bottom: 12%;
-}
-#food p {
-   line-height: 30px;
-   color: #878383;
-   text-align: justify;
+#saved h1 {
+   font: 30px/1.1em 'opensans-bold', sans-serif;
+   color: black;
+   letter-spacing: -2px;
+   margin: 0% auto 8px auto;
+   text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
+   text-align: center;
 }
 
 
@@ -246,12 +244,15 @@ ul#nav li a:hover { color: rgba(255, 255, 0, 0.675)}
 /* d. Login Page
 /* ------------------------------------------------------------------ */
 
-#food {
-   background: #2B2B2B;
+#login {
+   background: #bbb;
    padding-top: 96px;
    padding-bottom: 80px;
 }
 
+.text-center {
+   text-align: center;
+}
 
 #food h2 {
    font: 40px/28px 'opensans-bold', sans-serif;

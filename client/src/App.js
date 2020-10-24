@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Components/Header';
 import Spots from './Components/Spots';
 import Saved from './Components/Saved';
+import Login from './Components/Login';
 
 
 function App () {
@@ -11,6 +12,7 @@ function App () {
         <Header />
         <Spots />
         <Saved />
+        <Login />
       </div>
     );
   }

@@ -1,12 +1,8 @@
 import React from "react";
-import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
 
-
-
-function Spots() {
+function Saved() {
   return (
-    <section className="my-5" id="spots">
+    <section className="my-5" id="saved">
    <h1>Your Saved Spots</h1>
   <div className="dateSpot">
   <span className="dot"></span>
@@ -16,5 +12,5 @@ function Spots() {
   );
 }
 
-export default Spots;
+export default Saved;
 
