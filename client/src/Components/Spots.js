@@ -1,56 +1,86 @@
-import React from "react";
-import Dropdown from 'react-bootstrap/Dropdown';
-import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
 
+import React, { useState } from 'react';
+import { Dropdown, Container, Card, Button, CardColumns } from 'react-bootstrap';
+import { searchNowPlayingMovies } from '../utils/API';
 
 
 function Spots() {
-  return (
-    <section className="my-5" id="spots">
-   <h1>What type of date spot are you feeling?</h1>
-  <div className="dropdownButton">
-  <Dropdown>
-  <Dropdown.Toggle  className="btn-warning" id="dropdown-basic">
-    DateSpot
-  </Dropdown.Toggle>
 
-  <Dropdown.Menu alignCenter>
-    <Dropdown.Item className="dropdownItem" href="#/action-1">Romantic</Dropdown.Item> <br></br>
-    <Dropdown.Item className="dropdownItem"  href="#/action-2">Casual</Dropdown.Item> <br></br>
-    <Dropdown.Item className="dropdownItem"  href="#/action-3">Energized</Dropdown.Item><br></br>
-    <Dropdown.Item className="dropdownItem"  href="#/action-3">Energized</Dropdown.Item><br></br>
-    <Dropdown.Item className="dropdownItem"  href="#/action-3">Spontaneous</Dropdown.Item><br></br>
-    <Dropdown.Item className="dropdownItem"  href="#/action-3">Outgoing</Dropdown.Item><br></br>
-    <Dropdown.Item className="dropdownItem"  href="#/action-3">Antisocial</Dropdown.Item><br></br>
-  </Dropdown.Menu>
-   </Dropdown>
-  </div>
-  <div className="dateSpot">
-  <span className="dot"></span>
-  <span className="dot"></span>
-  </div>
-  <div className="dateCards">
-      <Card cardName="movieCard" style={{ width: '18rem' }}>
-      <Card.Header>Movies</Card.Header>
-      <ListGroup variant="flush">
-        <ListGroup.Item className="listItem">Cras justo odio</ListGroup.Item>
-        <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-        <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-      </ListGroup>
-    </Card>
-    <Card cardName="foodCard" style={{ width: '18rem' }}>
-    <Card.Header>Food</Card.Header>
-      <ListGroup variant="flush">
-        <ListGroup.Item>Cras justo odio</ListGroup.Item>
-        <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-        <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-      </ListGroup>
-    </Card>
-  </div>
+  const [Movies, setMovies] = useState([]); 
+  
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+
+    // if (!searchInput) {
+    //   return false;
+    // }
+
+    try {
+      const response = await searchNowPlayingMovies();
+      console.log(response)
+
+      if (!response.ok) {
+        throw new Error('something went wrong!');
+      }
+
+      const { results } = await response.json();
+      console.log(results)
+
+      const movieData = results.map((movie) => ({
+        movieId: movie.id,
+        movieTitle: movie.title,
+        moviePoster: "https://image.tmdb.org/t/p/w200/" + movie.poster_path
+      }));
+
+      console.log(movieData)
+
+      setMovies(movieData);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  return (
+    <>
+    <section className="my-5" id="spots">
+      <h1>What type of date are you feeling?</h1>
+        <div className="button">
+        <Dropdown>
+          <Dropdown.Toggle onClick={handleFormSubmit}  className="btn-warning" id="dropdown-basic">
+            DateSpot
+          </Dropdown.Toggle>
+            <Dropdown.Menu alignCenter>
+              <Dropdown.Item className="dropdownItem" href="#/action-1">Action</Dropdown.Item> <br></br>
+              <Dropdown.Item className="dropdownItem"  href="#/action-2">Another action</Dropdown.Item> <br></br>
+              <Dropdown.Item className="dropdownItem"  href="#/action-3">Something else</Dropdown.Item>
+            </Dropdown.Menu>
+        </Dropdown>
+        </div>
+        <div className="dateSpot">
+          <span className="dotTop">Fave <br></br> Movie Spot</span>
+          <span className="dotTop">Fave <br></br> Food Spot</span>
+        </div>
+        <div className="button">
+        <Button id="dropdown-basicSave" variant="warning">Save DateSpots</Button>{' '}
+        </div>
+        <Container className="movieOptions">
+          <h2>DateSpot Suggestions</h2>
+          <CardColumns>
+          {Movies.map((movie) => {
+            return (
+              <Card className="dot" key={movie.movieId} border='dark'>
+                <Card.Body>
+                <span><Card.Title className="movieTitle">{movie.movieTitle}</Card.Title>
+                  <Card.Img className="moviePoster" src={movie.moviePoster}></Card.Img></span>
+                </Card.Body>
+              </Card>
+            )
+          })}
+          </CardColumns>
+      </Container>
   </section>
+  </>
   );
 }
 
 export default Spots;
-
