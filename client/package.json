@@ -14,12 +14,9 @@
     "react-dom": "^17.0.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.4",
-<<<<<<< HEAD
-    "zomato-api": "^0.1.2"
-=======
+    "zomato-api": "^0.1.2",
     "react-spring": "^8.0.27",
     "styled-components": "^5.2.0"
->>>>>>> db7356217e54e6e13e210018081c5329cd629c30
   },
   "scripts": {
     "start": "react-scripts start",

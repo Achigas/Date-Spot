@@ -1,7 +1,11 @@
 
 import React, { useState } from 'react';
 import { Dropdown, Container, Card, Button, CardColumns } from 'react-bootstrap';
-import { searchNowPlayingMovies } from '../utils/API';
+import { 
+    searchNowPlayingMovies,
+    searchPopularMovies,
+    getSweetSpot
+        } from '../utils/API';
 
 
 function Spots() {
@@ -11,12 +15,14 @@ function Spots() {
   
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+    let arrayMovies = []
 
     // if (!searchInput) {
     //   return false;
     // }
 
     try {
+      
       const response = await searchNowPlayingMovies();
 
       if (!response.ok) {
@@ -30,12 +36,40 @@ function Spots() {
         movieTitle: movie.title,
         moviePoster: "https://image.tmdb.org/t/p/w200/" + movie.poster_path
       }));
-
-      setMovies(movieData)
+      
+      const randomMovieNumber = Math.floor(Math.random() * Math.floor(19))
+      console.log(randomMovieNumber)
+      const selectionNowPlaying = movieData[randomMovieNumber]
+      console.log(selectionNowPlaying)
+      arrayMovies.push(selectionNowPlaying)
     } catch (err) {
       console.error(err);
     }
+    try {
+      const response = await searchPopularMovies();
+
+      if (!response.ok) {
+        throw new Error('something went wrong!');
+      }
+
+      const { results } = await response.json();
+
+      const popularData = results.map((movie) => ({
+        movieId: movie.id,
+        movieTitle: movie.title,
+        moviePoster: "https://image.tmdb.org/t/p/w200/" + movie.poster_path
+      }));
       
+      const randomPopularNumber = Math.floor(Math.random() * Math.floor(19))
+      console.log(randomPopularNumber)
+      const selectionPopular = popularData[randomPopularNumber]
+      console.log(selectionPopular)
+      arrayMovies.push(selectionPopular)
+      setMovies(arrayMovies)
+ 
+    } catch (err) {
+      console.error(err);
+    }
       try {
         const response = await getSweetSpot();
         console.log(response)
