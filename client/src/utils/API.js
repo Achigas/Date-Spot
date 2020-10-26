@@ -73,18 +73,18 @@ export const getGenreInfo = () => {
 }
 
 //HotSpot 
-// export const getHotSpot=()=>{
+// export const getHotSpot = () => {
 //   return client search({
-//     "collection": {
+//     collection: {
 //       entity_id: 280,
-//       entity_type: city,
+//       entity_type: "city",
 //       start: 5,
 //       count: 2,
 //       collection_id: 1,
 //       user_rating: {
 //         aggregate_rating: "3.7",
 //         title: "Trending This Week",
-//       "categories": {
+//       categories: {
 //         id: 2,
 //         name: "Dine-out",
 //         }
@@ -93,20 +93,20 @@ export const getGenreInfo = () => {
 // }
 
 // //LazySpot 
-// export const getLazySpot=()=>{
+// export const getLazySpot = () => {
 //   return client search({
-//     "collection": {
+//     collection: {
 //       entity_id: 280,
 //       entity_type: city,
 //       start: 5,
 //       count: 2,
-//     "establishment": {
+//     establishment: {
 //       id: 281, 
 //       name: "Fast Food",
 //     has_online_delivery: 0,
 //     is_delivering_now: 0, 
 //     }
-//     "categories": {
+//     categories: {
 //         id: 5,
 //         name: "Takeaway",
 //         }
@@ -115,14 +115,14 @@ export const getGenreInfo = () => {
 // }
 
 // //SweetSpot
-// export const getSweetSpot=()=>{
+// export const getSweetSpot = () => {
 //   return client search{(
 //     entity_id: 280,
 //     entity_type: city,
 //     start: 5,
 //     count 2, 
 //     collection_id: 320,
-//     "establishment": {
+//     establishment: {
 //     establishment_id: 31,
 //     establishment_name: "Bakery"
 //   }
