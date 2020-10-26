@@ -108,6 +108,21 @@ export const getGenreInfo = () => {
   return fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=" + APIKeyMovieDB + "&language=en-US")
 }
 
+
+
+
+//HotSpot
+export const getHotSpot = () =>{
+  return client search({
+    entity_id: 280,
+    entity_type: "city",
+    q: trending, popular, best, 
+    start: 5,
+    count: 2,
+    cuisines: "dine-in", 
+    collection_id: 1
+})
+}
 //HotSpot 
 // export const getHotSpot = () => {
 //   return client search({
