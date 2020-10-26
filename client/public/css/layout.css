@@ -54,7 +54,7 @@ header .banner-text h1 {
    font: 40px/1.1em 'opensans-bold', sans-serif;
    color: #fff;
    letter-spacing: -2px;
-   margin: 60% auto 8px auto;
+   margin: 65% auto 8px auto;
    text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
 }
 header .banner-text h3 {
@@ -152,32 +152,91 @@ ul#nav li a:hover { color: rgba(255, 255, 0, 0.675)}
 
 #dropdown-basic {
    background-color: rgba(255, 255, 0, 0.675);
+   padding: 15px;
 }
 
-.dropdownButton {
-   align-items: center;
+#dropdown-basicSave {
+   background-color: rgba(255, 255, 0, 0.675);
+   padding: 15px;
+   margin-top: 3%;
 }
+
+
+.dropdownItem {
+  margin-right: 3%;
+   color: #fff;
+
+}
+
+.button  {
+   text-align: center;
+}
+
+.dotTop {
+   height: 550px;
+   width: 550px;
+   background-color: #bbb;
+   border-radius: 50%;
+   display: inline-block;
+   margin-top: 3%;
+   margin-left: 1%;
+   margin-right: 1%;
+   font-weight: bold;
+   font-size: xx-large;
+ }
+
+.dot {
+   height: 500px;
+   width: 500px;
+   background-color: #bbb;
+   border-radius: 50%;
+   display: inline-block;
+   margin-top: 5%;
+   margin-left: 1%;
+   margin-right: 1%;
+ }
+
+ .dateSpot {
+   text-align: center;
+ }
+
+ .movieOptions {
+    margin-top: 3%;
+    text-align: center;
+    color: #fff;
+ }
+
+ .movieTitle {
+    margin-top: 14%;
+    margin-bottom: 3%;
+    font-weight: bold;
+    color: black;
+ }
+
+ .moviePoster {
+    height: 300px;
+    width: 200px;
+ }
+
 
 /* ------------------------------------------------------------------ */
 /* c. Saved Page
 /* ------------------------------------------------------------------ */
 
-#food {
-   background: #2B2B2B;
+
+#saved {
    padding-top: 96px;
-   padding-bottom: 80px;
+   padding-bottom: 96px;
 }
 
 
-#food h2 {
-   font: 40px/28px 'opensans-bold', sans-serif;
-   color: #fff;
-   margin-bottom: 12%;
-}
-#food p {
-   line-height: 30px;
-   color: #878383;
-   text-align: justify;
+#saved h1 {
+   font: 30px/1.1em 'opensans-bold', sans-serif;
+   color: black;
+   letter-spacing: -2px;
+   margin: 0% auto 8px auto;
+   text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
+   text-align: center;
 }
 
 
@@ -185,12 +244,15 @@ ul#nav li a:hover { color: rgba(255, 255, 0, 0.675)}
 /* d. Login Page
 /* ------------------------------------------------------------------ */
 
-#food {
-   background: #2B2B2B;
+#login {
+   background: #bbb;
    padding-top: 96px;
    padding-bottom: 80px;
 }
 
+.text-center {
+   text-align: center;
+}
 
 #food h2 {
    font: 40px/28px 'opensans-bold', sans-serif;
@@ -256,17 +318,7 @@ footer .copyright  li:first-child:before {
 header .banner-text h1 {
   margin-top: -30%;     
 }
-.contentInfo {
-   font-size: 14px;
-}
 
-.video {
-   margin-left: 1%;
-}
-
- .singlevideo {
-     width: 450px ;
-  }
  
 
 }
@@ -294,52 +346,6 @@ header .banner-text h1 {
      font: 15px 'opensans-bold', sans-serif;
      letter-spacing: 1.5px;
   }
-
-
-  /* About Section
-  ------------------------------------------------------------------- */
-  #about .profile-pic {
-     width: 420px;
-     height: 530px;
-     margin-left: 12px;
-  }
-  #about .contact-details { width: 50%; }
-  #about .download { width: 50%; }
-
-  /* Web Section
-  ------------------------------------------------------------------- */
-  #web h1 span {
-   border-bottom: 3px solid #11ABB0;
-   padding-bottom: 6px;
-   line-height: 2;
-}
-  .portfolioimage {
-   height: 350px;
-}
-    /* Content Section
-  ------------------------------------------------------------------- */
-  .video {
-   margin-left: 1%;
-}
-
- .singlevideo {
-     width: 350px ;
-  }
-
- .contentInfo {
-    font-size: 14.5px;
- }
- 
- 
-  /* Contact Section
-  ------------------------------------------------------------------- */
-  #contact .section-head { margin-bottom: 30px; }
-  #contact .header-col h1:before {
-     font-size: 66px;
-     line-height: 66px;
-  }
-  #contact .section-head p.lead { font: 17px/33px opensans-light, sans-serif; }
-
 
 }
 
@@ -458,90 +464,6 @@ header .banner-text h1 {
      margin: -2px auto;
   }
 
-  /* header social links */
-  header .social {
-     margin: 18px 0 24px 0;
-     font-size: 24px;
-     line-height: 36px;      
-  }
-  header .social li { margin: 0 10px; }
-
-   /* scrolldown link */
-  header .scrolldown { display: none; }
-
-
-  /* About Section
-  -------------------------------------------------------------------- */
-  #about .profile-pic { 
-     width: 400px;
-   }
-
- 
-
-
-  /* Web Section
-  --------------------------------------------------------------------- */
-  #web .header-col {
-     padding-top: 0;
-     margin-bottom: 48px;
-     text-align: center;
-  }
-  #web .main-col { padding-right: 30px; }
-  #web h3, #web .info { text-align: center; }
-     
-  .secondProject {
-   margin-left: 0%;
-}
-
-.design {
-   margin-top: -5%;
-}
-
-.projects, .skills {
-   font-size: 16px;
-}
-
-  /* ContentSection
-  /* ----------------------------------------------------------------- */
-  #portfolio h2 {
-     line-height: 1.1;
-     margin-bottom: -10%;
-  }
- 
-  .singlevideo {
-    width: 350px;
- }
-
-
-
- .portfolio-item {
-   margin-right: 20%;
-   margin-left: 10%;
- }
-
-
- .contentInfo {
-   font-size: 16px;
-}
-
- .overlay {
-    margin-right: 20%;
- }
-
-
-
-
-
-
-  /* footer
-  ------------------------------------------------------------------------ */
- 
-  /* copyright */
-  footer .copyright li:before { content: none; }
-  footer .copyright li { margin-right: 12px; }
-
-
-
 
 }
 
@@ -559,55 +481,6 @@ header .banner-text h1 {
       font: 30px;
    }
 
-   .aboutInfo {
-      padding-right: 15px;
-      }
-
- #about .profile-pic {
-    padding-right: 15px;
- }
-    
-  #web h2 {
-     line-height: 1.1;
-  }
-
-   .secondProject {
-      margin-left: 0%;
-   }
-
-   .portfolioimage {
-      height: 300px;
-      width: 800px;
-   }
-
-   #portfolio h2 {
-      line-height: 1.1;
-      margin-bottom: -5%;
-   }
-
-   .projectTitle {
-      font-size: 100%;
-   }
-
-   .portfolio-item {
-      margin-left: -5%;
-   }
-   
-   .video, .contentInfo, .projectTitle {
-      margin-left: 4%;
-   }
-
-   .contentInfo {
-      font-size: 15px;
-   }
-
-   .singlevideo {
-      width: 500px;
-   }
-
-   #photography h2 {
-      line-height: 1.1;
-   }
 }
 
 
@@ -634,48 +507,7 @@ header .banner-text h1 {
   header .social { font-size: 20px;}
   header .social li { margin: -10% 6px; }
 
-  #about .profile-pic {
-   display: none;
-}
-
-
-#about h2, #web h2, #portfolio h2, #photography h2 {
-   font-size: 35px;
-}
-
-.aboutInfo {
-   padding-right: 15px;
-   }
-   
-.design {
-   margin-top: -5%;
-}
-#portfolio h2 {
-   margin-bottom: -45px;
-}
-
-.portfolio-item .item-wrap {
-   margin-bottom: -25%;
-}
-
-.content-button {
-   margin-top: 15%;
-}
-
-
-
-.singlevideo {
-   width: 350px;
-}
-
-
-  /* footer
-  ------------------------------------------------------------------------ */
-
-  /* social links */
-  footer .social-links { font-size: 20px; }
-  footer .social-links li { margin-left: 14px; margin-top: -5%; }   
-
+  
 }
 
 @media screen and (max-width: 375px) {
@@ -685,34 +517,6 @@ header .banner-text h1 {
    font: 35px/1.1em 'opensans-bold', sans-serif;      
    margin: -70% auto 14px auto;
 }
-
-.aboutInfo {
-padding-right: 15px;
-}
-
-#about .profile-pic {
-   display: none;
-}
-
-.portfolio-item {
-   margin-left: 3%;
-}
-
-#portfolio h2 {
-   margin-bottom: -50px;
-}
-
-.portfolio-item .item-wrap {
-   margin-bottom: -25%;
-}
-
-.content-button {
-   margin-top: 12%;
-}
-
- .singlevideo {
-    width: 330px;
- }
 
 
 }

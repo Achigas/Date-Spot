@@ -1,6 +1,7 @@
+
 import React, { useState } from 'react';
 import { Dropdown, Container, Card, Button, CardColumns } from 'react-bootstrap';
-import { searchNowPlayingMovies, getSweetSpot } from '../utils/API';
+import { searchNowPlayingMovies } from '../utils/API';
 
 
 function Spots() {
@@ -61,7 +62,7 @@ function Spots() {
     <>
     <section className="my-5" id="spots">
       <h1>What type of date are you feeling?</h1>
-        <div className="dropdownButton">
+        <div className="button">
         <Dropdown>
           <Dropdown.Toggle onClick={handleFormSubmit}  className="btn-warning" id="dropdown-basic">
             DateSpot
@@ -73,31 +74,29 @@ function Spots() {
             </Dropdown.Menu>
         </Dropdown>
         </div>
+        <div className="dateSpot">
+          <span className="dotTop">Fave <br></br> Movie Spot</span>
+          <span className="dotTop">Fave <br></br> Food Spot</span>
+        </div>
+        <div className="button">
+        <Button id="dropdown-basicSave" variant="warning">Save DateSpots</Button>{' '}
+        </div>
+        <Container className="movieOptions">
+          <h2>DateSpot Suggestions</h2>
+          <CardColumns>
+          {Movies.map((movie) => {
+            return (
+              <Card className="dot" key={movie.movieId} border='dark'>
+                <Card.Body>
+                <span><Card.Title className="movieTitle">{movie.movieTitle}</Card.Title>
+                  <Card.Img className="moviePoster" src={movie.moviePoster}></Card.Img></span>
+                </Card.Body>
+              </Card>
+            )
+          })}
+          </CardColumns>
+      </Container>
   </section>
-  <Container>
-    <h2>Results</h2>
-      <CardColumns>
-        {Movies.map((movie) => {
-          return (
-            <Card key={movie.movieId} border='dark'>
-              <Card.Body>
-                <Card.Title>{movie.movieTitle}</Card.Title>
-                <Card.Img src={movie.moviePoster}></Card.Img>
-              </Card.Body>
-            </Card>
-          )
-        })}
-        {Restaurants.map((restaurant) => {
-          return (
-            <Card key={restaurant.id} border='dark'>
-            <Card.Body>
-              <Card.Title>{restaurant.name}</Card.Title>
-            </Card.Body>
-          </Card>
-          )
-        })}
-      </CardColumns>
-  </Container>
   </>
   );
 }

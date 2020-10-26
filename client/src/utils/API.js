@@ -4,6 +4,8 @@ var APIKeyMovieDB = "4ee2048f656df52ca79c1b3928871706"
 // 'user-key': 'c209bc4f98e550ee1bf34b732bd7faad'
 // })
 const config = { headers: {'user-key': 'c209bc4f98e550ee1bf34b732bd7faad'} }; 
+const ZomatoAPI = "c209bc4f98e550ee1bf34b732bd7faad"
+
 
 export const getMe = (token) => {
     return fetch('/api/users/me', {
