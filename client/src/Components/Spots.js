@@ -44,7 +44,11 @@ function Spots() {
     <>
     <section className="my-5" id="spots">
       <h1>What type of date are you feeling?</h1>
+<<<<<<< HEAD
         <div className="button">
+=======
+        <div className="dropdownButton">
+>>>>>>> e5c1b245afb34c1e29b2b6b524833fdfbe670cfa
         <Dropdown>
           <Dropdown.Toggle onClick={handleFormSubmit}  className="btn-warning" id="dropdown-basic">
             DateSpot
@@ -56,6 +60,7 @@ function Spots() {
             </Dropdown.Menu>
         </Dropdown>
         </div>
+<<<<<<< HEAD
         <div className="dateSpot">
           <span className="dotTop">Fave <br></br> Movie Spot</span>
           <span className="dotTop">Fave <br></br> Food Spot</span>
@@ -79,6 +84,24 @@ function Spots() {
           </CardColumns>
       </Container>
   </section>
+=======
+  </section>
+  <Container>
+    <h2>Results</h2>
+      <CardColumns>
+        {Movies.map((movie) => {
+          return (
+            <Card key={movie.movieId} border='dark'>
+              <Card.Body>
+                <Card.Title>{movie.movieTitle}</Card.Title>
+                <Card.Img src={movie.moviePoster}></Card.Img>
+              </Card.Body>
+            </Card>
+          )
+        })}
+      </CardColumns>
+  </Container>
+>>>>>>> e5c1b245afb34c1e29b2b6b524833fdfbe670cfa
   </>
   );
 }
