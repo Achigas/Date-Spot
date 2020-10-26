@@ -81,6 +81,7 @@ export const getSweetSpot = () => {
   `, config)
 }
 
+/// top trending bakery in the area. 
 // export const getSweetSpot = () => {
 //   return client.search({
 //     entity_id: 280,
