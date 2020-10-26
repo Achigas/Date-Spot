@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Dropdown, Container, Card, Button, CardColumns } from 'react-bootstrap';
-import { searchNowPlayingMovies } from '../utils/API';
+import { searchNowPlayingMovies, getSweetSpot } from '../utils/API';
 
 
 function Spots() {
 
   const [Movies, setMovies] = useState([]); 
+  const [Restaurants, setRestaurants] = useState([]);
   
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -16,14 +17,12 @@ function Spots() {
 
     try {
       const response = await searchNowPlayingMovies();
-      console.log(response)
 
       if (!response.ok) {
         throw new Error('something went wrong!');
       }
 
       const { results } = await response.json();
-      console.log(results)
 
       const movieData = results.map((movie) => ({
         movieId: movie.id,
@@ -31,9 +30,28 @@ function Spots() {
         moviePoster: "https://image.tmdb.org/t/p/w200/" + movie.poster_path
       }));
 
-      console.log(movieData)
+      setMovies(movieData)
+    } catch (err) {
+      console.error(err);
+    }
+      
+      try {
+        const response = await getSweetSpot();
+        console.log(response)
+  
+        if (!response.ok) {
+          throw new Error('something went wrong!');
+        }
+  
+        const { restaurants } = await response.json();
+        console.log(restaurants)
+  
+        const restaurantData = restaurants.map((restaurant) => ({
+          id: restaurant.restaurant.id,
+          name: restaurant.restaurant.name
+        }));
 
-      setMovies(movieData);
+      setRestaurants(restaurantData);
     } catch (err) {
       console.error(err);
     }
@@ -67,6 +85,15 @@ function Spots() {
                 <Card.Img src={movie.moviePoster}></Card.Img>
               </Card.Body>
             </Card>
+          )
+        })}
+        {Restaurants.map((restaurant) => {
+          return (
+            <Card key={restaurant.id} border='dark'>
+            <Card.Body>
+              <Card.Title>{restaurant.name}</Card.Title>
+            </Card.Body>
+          </Card>
           )
         })}
       </CardColumns>
