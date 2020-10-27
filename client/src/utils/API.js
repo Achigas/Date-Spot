@@ -105,7 +105,16 @@ export const getHotSpot = () => {
   return fetch (`https://developers.zomato.com/api/v2.1/search?entity_id=280&entity_type=city&start=5&count=1&collection_id=1&sort=rating&order=desc
   `, config)
 }
-    
+
+export const getCheapHotSpot = () => {
+  return fetch (`https://developers.zomato.com/api/v2.1/search?entity_id=280&entity_type=city&start=5&count=1&collection_id=434
+  `, config)
+}
+
+export const getTopRatedHotSpot = () => {
+  return fetch (`https://developers.zomato.com/api/v2.1/search?entity_id=280&entity_type=city&start=5&count=1&collection_id=1&sort=rating&order=desc
+  `, config)
+}
 
   // fetch('https://developers.zomato.com/api/v2.1/search?entity_type=city&q='+city, {
   // method: 'GET', //This could be any http method

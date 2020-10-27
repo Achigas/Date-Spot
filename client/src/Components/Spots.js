@@ -1,10 +1,10 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Dropdown, Container, Card, Button, CardColumns } from 'react-bootstrap';
 import { 
     searchNowPlayingMovies,
     searchPopularMovies,
-    getSweetSpot, getHotSpot
+    getSweetSpot, getHotSpot, getCheapHotSpot
         } from '../utils/API';
 
 
@@ -12,17 +12,18 @@ function Spots() {
 
   const [Movies, setMovies] = useState([]); 
 
-  useEffect(()=>{
-    getHotSpot("40.7128","74.0060").then(res=>{
-      console.log(res.data.restaurants)
-    })
+  // useEffect(()=>{
+  //   getHotSpot("40.7128","74.0060").then(res=>{
+  //     console.log(res.data.restaurants)
+  //   })
     
-  },[])
+  //},[])
   const [Restaurants, setRestaurants] = useState([]);
   
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     let arrayMovies = []
+    let arrayRestaurants = []
 
     // if (!searchInput) {
     //   return false;
@@ -90,13 +91,43 @@ function Spots() {
   
         const restaurantData = restaurants.map((restaurant) => ({
           id: restaurant.restaurant.id,
-          name: restaurant.restaurant.name
+          name: restaurant.restaurant.name,
+          image: restaurant.restaurant.thumb,
+          location: restaurant.restaurant.location.address
         }));
 
-      setRestaurants(restaurantData);
+      const randomRest = Math.floor(Math.random() * Math.floor(restaurantData.length))+1
+      const selectionRestaurant = restaurantData[randomRest]
+      arrayRestaurants.push(selectionRestaurant)
+      arrayRestaurants.push(restaurantData[0])
     } catch (err) {
       console.error(err);
     }
+    try {
+      const response = await getCheapHotSpot();
+      console.log(response)
+
+      if (!response.ok) {
+        throw new Error('something went wrong!');
+      }
+
+      const { restaurants } = await response.json();
+      console.log(restaurants)
+
+      const cheaprestaurantData = restaurants.map((restaurant) => ({
+        id: restaurant.restaurant.id,
+        name: restaurant.restaurant.name,
+        image: restaurant.restaurant.thumb,
+        location: restaurant.restaurant.location.address
+      }));
+
+    const randomCheapRest = Math.floor(Math.random() * Math.floor(cheaprestaurantData.length))
+    const selectionCheapRestaurant = cheaprestaurantData[randomCheapRest]
+    arrayRestaurants.push(selectionCheapRestaurant)
+    setRestaurants(arrayRestaurants); 
+  } catch (err) {
+    console.error(err);
+  }
   };
 
   return (
@@ -142,6 +173,8 @@ function Spots() {
               <Card className="dot" key={restaurant.id} border='dark'>
                 <Card.Body>
                 <Card.Title className="movieTitle">{restaurant.name}</Card.Title>
+                <Card.Img className="moviePoster" src={restaurant.image}></Card.Img>
+                <Card.Text className="movieTitle">{restaurant.location}</Card.Text>
                 </Card.Body>
               </Card>
             )
