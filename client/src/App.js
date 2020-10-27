@@ -4,6 +4,7 @@ import Header from './Components/Header';
 import Spots from './Components/Spots';
 import Saved from './Components/Saved';
 import Login from './Components/Login';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App () {
