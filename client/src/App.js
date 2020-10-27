@@ -10,15 +10,17 @@ import SignUp from './Components/Signup';
 
 function App () {
    return (
-     <Router>
+    <Router>
        <>
       <div className="App">
         <Header/>
         <Spots />
         <Saved />
+        <Login />
+        <SignUp />
       </div>
       </>
-      </Router>
+   </Router>
       
     );
   }

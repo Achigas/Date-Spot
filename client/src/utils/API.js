@@ -1,15 +1,7 @@
 // var APIKeyMovieDB = "4ee2048f656df52ca79c1b3928871706"
 // const ZomatoAPI = "c209bc4f98e550ee1bf34b732bd7faad"
-import axios from "axios"
  
-
-
-
 var APIKeyMovieDB = "4ee2048f656df52ca79c1b3928871706"
-// var zomato = require('zomato-api');
-// var client = zomato({
-// 'user-key': 'c209bc4f98e550ee1bf34b732bd7faad'
-// })
 const config = { headers: {'user-key': 'c209bc4f98e550ee1bf34b732bd7faad'} }; 
 const ZomatoAPI = "c209bc4f98e550ee1bf34b732bd7faad"
 
@@ -34,6 +26,7 @@ export const getMe = (token) => {
   // };
   
   export const createUser = (userData) => {
+    console.log("hi")
     return fetch('/api/users', {
       method: 'POST',
       headers: {
