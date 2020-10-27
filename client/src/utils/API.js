@@ -5,6 +5,14 @@ import axios from "axios"
 
 
 
+var APIKeyMovieDB = "4ee2048f656df52ca79c1b3928871706"
+// var zomato = require('zomato-api');
+// var client = zomato({
+// 'user-key': 'c209bc4f98e550ee1bf34b732bd7faad'
+// })
+const config = { headers: {'user-key': 'c209bc4f98e550ee1bf34b732bd7faad'} }; 
+const ZomatoAPI = "c209bc4f98e550ee1bf34b732bd7faad"
+
 
 export const getMe = (token) => {
   return fetch('/api/users/me', {
@@ -93,10 +101,10 @@ export const searchPopularMovies = () => {
 
 
 //HotSpot
-export const getHotSpot = (lat,lon) =>{
-  return   axios.get('https://developers.zomato.com/api/v2.1/search?lat='+lat+'&lon='+lon,{
-        headers: {"user-key": "c209bc4f98e550ee1bf34b732bd7faad"}
-      });
+export const getHotSpot = () => {
+  return fetch (`https://developers.zomato.com/api/v2.1/search?entity_id=280&entity_type=city&start=5&count=1&collection_id=1&sort=rating&order=desc
+  `, config)
+}
     
 
   // fetch('https://developers.zomato.com/api/v2.1/search?entity_type=city&q='+city, {
@@ -105,7 +113,7 @@ export const getHotSpot = (lat,lon) =>{
   //   'user-key': 'c209bc4f98e550ee1bf34b732bd7faad',
   //   'Content-Type': 'application/json',
   // } 
-}
+//}
   
 
 
@@ -195,3 +203,22 @@ export const getHotSpot = (lat,lon) =>{
   
 //  return fetch ("https://api.themoviedb.org/3/genre/movie/list?api_key=" + APIKeyMovieDB + "&language=en-US")
 //}
+export const getGenreInfo = () => {
+  return fetch ("https://api.themoviedb.org/3/genre/movie/list?api_key=" + APIKeyMovieDB + "&language=en-US")
+}
+
+export const getSweetSpot = () => {
+  return fetch (`https://developers.zomato.com/api/v2.1/search?entity_id=280&entity_type=city&start=5&count=1&collection_id=320&sort=rating&order=desc
+  `, config)
+}
+
+/// top trending bakery in the area. 
+// export const getSweetSpot = () => {
+//   return client.search({
+//     entity_id: 280,
+//     entity_type: "city",
+//     start: 5,
+//     count: 2,
+//     collection_id: 320
+//   })
+// }
