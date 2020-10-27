@@ -43,11 +43,10 @@ function Spots() {
   return (
     <>
     <section className="my-5" id="spots">
-      <h1>What type of date are you feeling?</h1>
         <div className="button">
         <Dropdown>
-          <Dropdown.Toggle onClick={handleFormSubmit}  className="btn-warning" id="dropdown-basic">
-            DateSpot
+          <Dropdown.Toggle variant="success" className="btn-warning" id="dropdown-basic">
+          What type of date are you feeling?
           </Dropdown.Toggle>
             <Dropdown.Menu alignCenter>
               <Dropdown.Item className="dropdownItem" href="#/action-1">Action</Dropdown.Item> <br></br>
