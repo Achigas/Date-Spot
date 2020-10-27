@@ -95,6 +95,7 @@ function Spots() {
           id: restaurant.restaurant.id,
           name: restaurant.restaurant.name,
           image: restaurant.restaurant.thumb,
+          food: restaurant.restaurant.cuisines,
           location: restaurant.restaurant.location.address, 
           special: restaurant.restaurant.highlights,
           photourl: restaurant.restaurant.photos_url,
@@ -125,6 +126,7 @@ function Spots() {
         id: restaurant.restaurant.id,
         name: restaurant.restaurant.name,
         image: restaurant.restaurant.thumb,
+        food: restaurant.restaurant.cuisines,
         location: restaurant.restaurant.location.address,
         special: restaurant.restaurant.highlights,
         photourl: restaurant.restaurant.photos_url,
@@ -155,6 +157,7 @@ function Spots() {
       id: restaurant.restaurant.id,
       name: restaurant.restaurant.name,
       image: restaurant.restaurant.thumb,
+      food: restaurant.restaurant.cuisines,
       location: restaurant.restaurant.location.address,
       special: restaurant.restaurant.highlights,
       photourl: restaurant.restaurant.photos_url,
@@ -213,6 +216,7 @@ function Spots() {
                 <Card.Body>
                 <Card.Title className="movieTitle">{restaurant.name}</Card.Title>
                 <Card.Img className="moviePoster" src={restaurant.image}></Card.Img>
+                <Card.Text className="movieTitle">{restaurant.food}</Card.Text>
                 <Card.Text className="movieTitle">{restaurant.location}</Card.Text>
                 <Card.Text className="movieTitle">{restaurant.special}</Card.Text>
                 <Card.Text className="movieTitle">{restaurant.photourl}</Card.Text>

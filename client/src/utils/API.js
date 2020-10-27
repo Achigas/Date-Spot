@@ -250,10 +250,6 @@ export const getGenreInfo = () => {
   return fetch ("https://api.themoviedb.org/3/genre/movie/list?api_key=" + APIKeyMovieDB + "&language=en-US")
 }
 
-export const getSweetSpot = () => {
-  return fetch (`https://developers.zomato.com/api/v2.1/search?entity_id=280&entity_type=city&start=5&count=1&collection_id=320&sort=rating&order=desc
-  `, config)
-}
 
 /// top trending bakery in the area. 
 // export const getSweetSpot = () => {
