@@ -113,7 +113,7 @@ function Spots() {
           <span className="dotTop">Fave <br></br> Food Spot</span>
         </div>
         <div className="button">
-        <Button id="dropdown-basicSave" variant="warning">Save DateSpots</Button>{' '}
+        <Button id="dropdown-basicSave" class="button1" variant="warning">Save DateSpots</Button>{' '}
         </div>
         <Container className="movieOptions">
           <h2>DateSpot Suggestions</h2>

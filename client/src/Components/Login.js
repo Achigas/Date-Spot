@@ -14,35 +14,35 @@ function Login () {
                 <Card.Title className="movieTitle">Don't have an account yet? Sign up now! <br></br>Fill out the form below to get started. <br></br>  Already a member? <a href="#sign-in">Sign in!</a> </Card.Title>
                 <form>
                     <label>
-                       Username:
-                        <input type="text" name="name" />
-                    </label> <br></br>
+                       Username:  
+                        <input type="text" class="input" name="name" />
+                    </label> <br></br><br></br>
                     <label>
                        Password:
-                        <input type="text" name="password" /> <br></br>
-                        <p>Password must be at least 8 characters.</p>
-                    </label><br></br>
+                        <input type="text" class="input" name="password" /> <br></br><br></br>
+                        <small>Password must be at least 8 characters.</small>
+                    </label><br></br><br></br>
                     <label>
                        Zipcode:
-                        <input type="text" name="zipcode" />
-                    </label><br></br>
-                    <input type="submit" value="Submit" />
+                        <input type="text" class="input" name="zipcode" />
+                    </label><br></br><br></br>
+                    <input type="submit" class="button1" value="Submit" />
                 </form>
                 </Card.Body>
               </Card>
               <Card border='dark'>
                 <Card.Body>
-                <Card.Title className="movieTitle">Sign In </Card.Title>
+                <Card.Title className="movieTitle">Sign In</Card.Title>
                 <form>
                     <label>
                        Username:
-                        <input type="text" name="name" />
-                    </label> <br></br>
+                        <input type="text" class="input" name="name" />
+                    </label> <br></br><br></br>
                     <label>
                        Password:
-                        <input type="text" name="password" /> <br></br>
-                    </label><br></br>
-                    <input type="submit" value="Submit" />
+                        <input type="text" class="input" name="password" /> <br></br>
+                    </label><br></br><br></br>
+                    <input type="submit" class="button1" value="Submit" />
                 </form>
                 </Card.Body>
               </Card>
