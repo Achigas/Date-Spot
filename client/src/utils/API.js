@@ -1,5 +1,10 @@
-var APIKeyMovieDB = "4ee2048f656df52ca79c1b3928871706"
-const ZomatoAPI = "c209bc4f98e550ee1bf34b732bd7faad"
+// var APIKeyMovieDB = "4ee2048f656df52ca79c1b3928871706"
+// const ZomatoAPI = "c209bc4f98e550ee1bf34b732bd7faad"
+import axios from "axios"
+ 
+
+
+
 
 export const getMe = (token) => {
   return fetch('/api/users/me', {
@@ -10,25 +15,8 @@ export const getMe = (token) => {
   });
 };
 
-export const createUser = (userData) => {
-  return fetch('/api/users', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(userData),
-  });
-};
-
-export const loginUser = (userData) => {
-  return fetch('/api/users/login', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(userData),
-  });
-};
+ 
+ 
   //   return fetch('/api/users/me', {
   //     headers: {
   //       'Content-Type': 'application/json',
@@ -84,14 +72,7 @@ export const loginUser = (userData) => {
 //return fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
 //};
 
-export const searchNowPlayingMovies = () => {
-  //random page number
-  const pageNumber = Math.floor(Math.random() * Math.floor(5)) + 1
-  //take out API key
-  return fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=4ee2048f656df52ca79c1b3928871706&language=en-US&page=${pageNumber}`)
-    //return fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
-  //};
-}
+ 
 export const searchNowPlayingMovies = () => {
     //random page number
     const pageNumber = Math.floor(Math.random() * Math.floor(5)) + 1
@@ -104,23 +85,30 @@ export const searchPopularMovies = () => {
   return fetch(`https://api.themoviedb.org/3/movie/popular?api_key=4ee2048f656df52ca79c1b3928871706&language=en-US&page=${pageNumber}`)
 }
 
-export const getGenreInfo = () => {
-  return fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=" + APIKeyMovieDB + "&language=en-US")
-}
+// export const getGenreInfo = () => {
+//   return fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=" + APIKeyMovieDB + "&language=en-US")
+// }
 
 
 
 
 //HotSpot
-export const getHotSpot = () =>{
-  return fetch('https://developers.zomato.com/api/v2.1/search?entity_id=280&entity_type=city', {
-  method: 'GET', //This could be any http method
-  headers: {
-    'Authorization': 'Basic c209bc4f98e550ee1bf34b732bd7faad',
-    'Content-Type': 'application/json',
-  } 
-})
-.then((response) => response.json)
+export const getHotSpot = (lat,lon) =>{
+  return   axios.get('https://developers.zomato.com/api/v2.1/search?lat='+lat+'&lon='+lon,{
+        headers: {"user-key": "c209bc4f98e550ee1bf34b732bd7faad"}
+      });
+    
+
+  // fetch('https://developers.zomato.com/api/v2.1/search?entity_type=city&q='+city, {
+  // method: 'GET', //This could be any http method
+  // headers: {
+  //   'user-key': 'c209bc4f98e550ee1bf34b732bd7faad',
+  //   'Content-Type': 'application/json',
+  // } 
+}
+  
+
+
  
   
   
@@ -134,7 +122,7 @@ export const getHotSpot = () =>{
 //     cuisines: "dine-in", 
 //     collection_id: 1
 // })
-}
+
 // {
 //   entity_id: 280,
 //   entity_type: "city",
