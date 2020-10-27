@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/Achigas/Date-Spot#readme",
   "dependencies": {
-    "if-env": "^1.0.4"
+    "if-env": "^1.0.4",
+    "zomato-api": "^0.1.2"
   },
   "devDependencies": {
     "concurrently": "^5.3.0"
