@@ -20,6 +20,10 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+    city: {
+      type: Integer,
+      required: true
+    },
     //place holder for saved data
   //   savedDates: [dateSchema],
  },
