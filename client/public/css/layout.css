@@ -23,7 +23,7 @@ html, body {
 
 header {
    position: relative;
-   height: 700px;
+   height: 650px;
    min-height: 400px;
    width: 100%;
    background: grey url(../images/header-background.png) no-repeat top center;
@@ -229,12 +229,30 @@ ul#nav li a:hover { color: rgba(255, 255, 0, 0.675)}
 
 
 /* ------------------------------------------------------------------ */
-/* d. Login Page
+/* d. Login/Sign Up Pages
 /* ------------------------------------------------------------------ */
 
+#login {
+   background: #bbb;
+   padding-top: 96px;
+   padding-bottom: 80px;
+}
 
-.text-center {
+#sign-up {
+   background: #bbb;
+   padding-top: 96px;
+   padding-bottom: 80px;
+}
+
+.login-head {
    text-align: center;
+  font-weight: bold;
+}
+
+.form {
+   width: 300px;
+   margin-left: 40%;
+   font-weight: bold;
 }
 
 

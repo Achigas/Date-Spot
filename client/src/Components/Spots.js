@@ -131,7 +131,6 @@ function Spots() {
   };
 
   return (
-    <>
     <section className="my-5" id="spots">
         <div className="button">
         <Dropdown>
@@ -181,7 +180,6 @@ function Spots() {
           </CardColumns>
       </Container>
   </section>
-  </>
   );
 }
 
