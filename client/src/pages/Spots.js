@@ -7,6 +7,8 @@ import {
     getSweetSpot, getHotSpot, getCheapHotSpot
         } from '../utils/API';
 
+import logo from '../images/header-background.png'
+
 
 function Spots() {
 
@@ -132,6 +134,9 @@ function Spots() {
 
   return (
     <section className="my-5" id="spots">
+      <div>
+      <img className="logo"  src={logo} alt="DateSpot Logo" />
+      </div>
         <div className="button">
         <Dropdown>
           <Dropdown.Toggle  onClick={handleFormSubmit}  className="btn-warning" id="dropdown-basic">
