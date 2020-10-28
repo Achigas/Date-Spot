@@ -172,7 +172,7 @@ ul#nav li a:hover { color: rgba(255, 255, 0, 0.675)}
 
 .dotTop {
    height: 550px;
-   width: 550px;
+   width: 550px;c
    background-color: #bbb;
    border-radius: 50%;
    display: inline-block;
@@ -272,19 +272,30 @@ ul#nav li a:hover { color: rgba(255, 255, 0, 0.675)}
 }
 
 .button1 {
-   background-color: #d4c219;
-   font-size: 16px;
-   font-weight: 450;
-   padding: 12px 28px;
+   position: relative;
+   border: 0;
    border-radius: 10px;
-   transition-duration: 0.3s;
-   margin-left: 10px;
+	padding: 15px 25px;
+	display: inline-block;
+	text-align: center;
+   color: rgb(2, 2, 2);
+   background-color:#fab801;
 }
 
 .button1:hover {
-   background-color: #f8f403; /* Green */
+   color:#000000;
+   background-color: #e2a602;
+}
+
+
+.label {
    color: black;
- }
+}
+
+.title {
+   color: black;
+   font-weight: bold;
+}
 /* ------------------------------------------------------------------ */
 /* e. Footer
 /* ------------------------------------------------------------------ */
