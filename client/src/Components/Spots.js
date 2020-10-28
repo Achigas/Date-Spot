@@ -135,8 +135,8 @@ function Spots() {
     <section className="my-5" id="spots">
         <div className="button">
         <Dropdown>
-          <Dropdown.Toggle  className="btn-warning" id="dropdown-basic">
-            which type of date are you feeling?
+          <Dropdown.Toggle  onClick={handleFormSubmit}  className="btn-warning" id="dropdown-basic">
+            What type of date are you feeling?
           </Dropdown.Toggle>
             <Dropdown.Menu alignCenter>
               <Dropdown.Item className="dropdownItem" href="#/action-1">Action</Dropdown.Item>

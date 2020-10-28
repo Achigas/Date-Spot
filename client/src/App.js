@@ -6,6 +6,7 @@ import Spots from './Components/Spots';
 import Saved from './Components/Saved';
 import Login from './Components/Login';
 import SignUp from './Components/Signup';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App () {

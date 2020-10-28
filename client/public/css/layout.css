@@ -1,6 +1,5 @@
 /*
 =====================================================================
-
 /* ------------------------------------------------------------------ */
 /* a. General Styles
 /* ------------------------------------------------------------------ */
@@ -24,7 +23,7 @@ html, body {
 
 header {
    position: relative;
-   height: 800px;
+   height: 700px;
    min-height: 400px;
    width: 100%;
    background: grey url(../images/header-background.png) no-repeat top center;
@@ -54,7 +53,7 @@ header .banner-text h1 {
    font: 40px/1.1em 'opensans-bold', sans-serif;
    color: #fff;
    letter-spacing: -2px;
-   margin: 65% auto 8px auto;
+   margin: 25% auto 8px auto;
    text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
 }
 header .banner-text h3 {
@@ -141,22 +140,11 @@ ul#nav li a:hover { color: rgba(255, 255, 0, 0.675)}
 }
 
 
-#spots h1 {
-   font: 30px/1.1em 'opensans-bold', sans-serif;
-   color: #fff;
-   letter-spacing: -2px;
-   margin: 0% auto 8px auto;
-   text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
-   text-align: center;
-}
-
 #dropdown-basic {
-   background-color: rgba(255, 255, 0, 0.675);
    padding: 15px;
 }
 
 #dropdown-basicSave {
-   background-color: rgba(255, 255, 0, 0.675);
    padding: 15px;
    margin-top: 3%;
 }
@@ -244,28 +232,46 @@ ul#nav li a:hover { color: rgba(255, 255, 0, 0.675)}
 /* d. Login Page
 /* ------------------------------------------------------------------ */
 
-#login {
-   background: #bbb;
-   padding-top: 96px;
-   padding-bottom: 80px;
-}
 
 .text-center {
    text-align: center;
 }
 
-#food h2 {
-   font: 40px/28px 'opensans-bold', sans-serif;
-   color: #fff;
-   margin-bottom: 12%;
+
+
+.input {
+   border-radius: 25px;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 20px; 
+    width: 200px;
+    height: 15px;  
 }
-#food p {
-   line-height: 30px;
-   color: #878383;
-   text-align: justify;
+
+.button1 {
+   position: relative;
+   border: 0;
+   border-radius: 10px;
+	padding: 15px 25px;
+	display: inline-block;
+	text-align: center;
+   color: rgb(2, 2, 2);
+   background-color:#fab801;
+}
+
+.button1:hover {
+   color:#000000;
+   background-color: #e2a602;
 }
 
 
+.label {
+   color: black;
+}
+
+.title {
+   color: black;
+   font-weight: bold;
+}
 /* ------------------------------------------------------------------ */
 /* e. Footer
 /* ------------------------------------------------------------------ */
@@ -339,7 +345,7 @@ header .banner-text h1 {
   }
   header .banner-text hr {
      width: 65%;
-     margin: 12px auto;
+     margin: 5px auto;
   }
   /* nav-wrap */
   #nav-wrap {
@@ -520,7 +526,3 @@ header .banner-text h1 {
 
 
 }
-
-
-
-
