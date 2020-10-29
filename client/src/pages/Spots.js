@@ -7,6 +7,8 @@ import {
     getHotSpot, getCheapHotSpot, getSweetSpot
         } from '../utils/API';
 
+import logo from '../images/header-background.png'
+
 
 function Spots() {
 
@@ -174,9 +176,19 @@ function Spots() {
   };
 
   return (
-    <>
     <section className="my-5" id="spots">
-        <div className="button">
+        <div style= {{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }} >
+      <img className="logo"  src={logo} alt="DateSpot Logo" />
+      </div>
+        <div style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}>
           <DropdownButton  title="Which type of date are you feeling?" className="btn-warning" id="dropdown-basic" onSelect={handleFormSubmit}>
             <Dropdown.Menu aligncenter="true">
               <Dropdown.Item className="dropdownItem" eventKey="HotSpot">HotSpot</Dropdown.Item>
@@ -185,47 +197,53 @@ function Spots() {
             </Dropdown.Menu>
         </DropdownButton >
         </div>
-        <div className="dateSpot">
-          <span className="dotTop">Fave <br></br> Movie Spot</span>
-          <span className="dotTop">Fave <br></br> Food Spot</span>
-        </div>
-        <div className="button">
-        <Button id="dropdown-basicSave" variant="warning">Save DateSpots</Button>{' '}
-        </div>
-        <Container className="movieOptions">
-          <h2>DateSpot Suggestions</h2>
-          <CardColumns>
+          <h2 className= "options">DateSpot Suggestions</h2>
           {Movies.map((movie) => {
             return (
-              <Card className="dot" key={movie.movieId} border='dark'>
-                <Card.Body>
-                <span><Card.Title className="movieTitle">{movie.movieTitle}</Card.Title>
-                  <Card.Img className="moviePoster" src={movie.moviePoster}></Card.Img></span>
-                </Card.Body>
-              </Card>
+              <Container key={movie.movieId} >
+              <div style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+              }} >
+              <div className="dot">
+                <h3 className="title">{movie.movieTitle}</h3>
+                <div style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+              }} >
+                  <img className="poster" src={movie.moviePoster} alt="Movie Poster"/>
+                  </div>
+              </div> 
+              </div>
+              </Container>
             )
           })}
-          </CardColumns>
-          <CardColumns>
           {Restaurants.map((restaurant) => {
             return (
-              <Card className="dot" key={restaurant.id} border='dark'>
-                <Card.Body>
-                <Card.Title className="movieTitle">{restaurant.name}</Card.Title>
-                <Card.Img className="moviePoster" src={restaurant.image}></Card.Img>
-                <Card.Text className="movieTitle">{restaurant.food}</Card.Text>
-                <Card.Text className="movieTitle">{restaurant.location}</Card.Text>
-                <Card.Text className="movieTitle">{restaurant.special}</Card.Text>
-                <Card.Text className="movieTitle">{restaurant.photourl}</Card.Text>
-                <Card.Text className="movieTitle">{restaurant.hours}</Card.Text>
-                </Card.Body>
-              </Card>
+              <Container key={restaurant.id}>
+              <div style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+              }} >
+              <div className="dot" >
+                <h3 className="titleRes">{restaurant.name}</h3>
+                <div style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+              }} >
+                <img className="resPhoto" src={restaurant.image} alt="Restaurant Photo"/>
+                </div>
+                <h5 className="location">{restaurant.location}</h5>
+              </div>
+              </div>
+              </Container>
             )
           })}
-          </CardColumns>
-      </Container>
   </section>
-  </>
   );
 }
 

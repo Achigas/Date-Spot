@@ -53,15 +53,27 @@ const SignUp = () => {
 
   return (
     <>
+    <div id="sign-up">
+    <div className="login-head" style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }} >
+      <h2>Sign Up</h2><br></br>
+      </div>
       {/* This is needed for the validation functionality above */}
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         {/* show alert if server response is bad */}
         <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
           Something went wrong with your signup!
         </Alert>
-
-        <Form.Group>
-          <Form.Label htmlFor='username'>Username</Form.Label>
+       <div style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}>
+        <Form.Group className="form">
+          <Form.Label htmlFor='username'>Username:</Form.Label>
           <Form.Control
             type='text'
             placeholder='Your username'
@@ -72,9 +84,15 @@ const SignUp = () => {
           />
           <Form.Control.Feedback type='invalid'>Username is required!</Form.Control.Feedback>
         </Form.Group>
+        </div>
 
-        <Form.Group>
-          <Form.Label htmlFor='email'>Email</Form.Label>
+       <div style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}>
+        <Form.Group className="form">
+          <Form.Label htmlFor='email'>Email:</Form.Label>
           <Form.Control
             type='email'
             placeholder='Your email address'
@@ -85,9 +103,14 @@ const SignUp = () => {
           />
           <Form.Control.Feedback type='invalid'>Email is required!</Form.Control.Feedback>
         </Form.Group>
-
-        <Form.Group>
-          <Form.Label htmlFor='password'>Password</Form.Label>
+        </div>
+        <div style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}>
+        <Form.Group className="form">
+          <Form.Label htmlFor='password'>Password:</Form.Label>
           <Form.Control
             type='password'
             placeholder='Your password'
@@ -98,9 +121,15 @@ const SignUp = () => {
           />
           <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
         </Form.Group>
-        <Form.Group>
+        </div><br></br>
+        <div style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}>
+        <Form.Group className="form">
         <Form.Label>
-          Choose your city:
+          Choose your city: 
         </Form.Label>
           <select value={userFormData.city} name='city' onChange={handleInputChange} required >
             <option value="292">Chicago</option>
@@ -109,13 +138,22 @@ const SignUp = () => {
             <option value="280">New York City</option>
           </select>
         </Form.Group>
+        </div><br></br>
+        <div style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}>
         <Button
+        className="form"
           disabled={!(userFormData.username && userFormData.email && userFormData.password)}
           type='submit'
-          variant='success'>
+          variant='warning'>
           Submit
         </Button>
+        </div>
       </Form>
+      </div>
     </>
   );
 };

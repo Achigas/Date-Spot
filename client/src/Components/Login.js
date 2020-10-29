@@ -49,12 +49,25 @@ const Login = () => {
 
   return (
     <>
+    <div id="login">
+      <div className="login-head" style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }} >
+      <h2>Log In</h2><br></br>
+      </div>
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
           Something went wrong with your login credentials!
         </Alert>
-        <Form.Group>
-          <Form.Label htmlFor='email'>Email</Form.Label>
+        <div style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }} >
+        <Form.Group className="form" >
+          <Form.Label htmlFor='email'>Email:</Form.Label>
           <Form.Control
             type='text'
             placeholder='Your email'
@@ -65,9 +78,14 @@ const Login = () => {
           />
           <Form.Control.Feedback type='invalid'>Email is required!</Form.Control.Feedback>
         </Form.Group>
-
-        <Form.Group>
-          <Form.Label htmlFor='password'>Password</Form.Label>
+        </div>
+        <div style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }} >
+        <Form.Group className="form">
+          <Form.Label htmlFor='password'>Password:</Form.Label>
           <Form.Control
             type='password'
             placeholder='Your password'
@@ -78,13 +96,18 @@ const Login = () => {
           />
           <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
         </Form.Group>
+        </div><br></br>
+        <div className="button">
         <Button
+         className="form-button"
           disabled={!(userFormData.email && userFormData.password)}
           type='submit'
-          variant='success'>
+         >
           Submit
         </Button>
+        </div>
       </Form>
+      </div>
     </>
   );
 };

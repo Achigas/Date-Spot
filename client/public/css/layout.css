@@ -2,156 +2,50 @@
 =====================================================================
 
 /* ------------------------------------------------------------------ */
-/* a. General Styles
+/* a. Navbar Styles
 /* ------------------------------------------------------------------ */
 
-* {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-}
 
-html, body {
-   margin: 0;
-   height: 100%;
-   padding: 0; 
-}
-
-
-/* ------------------------------------------------------------------ */
-/* b. Header Styles
-/* ------------------------------------------------------------------ */
-
-header {
-   position: relative;
-   height: 700px;
-   min-height: 400px;
-   width: 100%;
-   background: grey url(../images/header-background.png) no-repeat top center;
-   background-size: 900px 700px;
-   text-align: center;
-   overflow: hidden;
-}
-
-/* vertically center banner section */
-header:before {
-   content: '';
-   display: inline-block;
-   vertical-align: middle;
-   height: 100%;
-}
-header .banner {
-   display: inline-block;
-   vertical-align: middle;
-   margin: 0 auto;
-   width: 85%;
-   padding-bottom: 30px;
-   text-align: center;
-}
-
-header .banner-text { width: 100%; }
-header .banner-text h1 {
-   font: 40px/1.1em 'opensans-bold', sans-serif;
-   color: #fff;
-   letter-spacing: -2px;
-   margin: 25% auto 8px auto;
-   text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
-}
-header .banner-text h3 {
-   font: 20px/1.6em 'librebaskerville-regular', serif;
-   color: #fff;
-   margin: 0 auto;
-   width: 70%;
-   text-shadow: 0px 1px 2px rgba(0, 0, 0, .3);
-}
-
-
-
-/* primary navigation
---------------------------------------------------------------------- */
-#nav-wrap ul, #nav-wrap li, #nav-wrap a {
-	 margin: 0;
-	 padding: 0;
-	 border: none;
-	 outline: none;
-}
-
-/* nav-wrap */
-#nav-wrap {
-   font: 15px 'opensans-bold', sans-serif;
-   width: 100%;
-   text-transform: uppercase;
-   letter-spacing: 2.5px;
-   margin: 0 auto;
-   z-index: 100;
+.navbar {
+   background: black;
    position: fixed;
-   left: 0;
-   top: 0;
-   background-color: #333;
-}
-
-/* hide toggle button */
-#nav-wrap > a.mobile-btn { display: none; }
-
-ul#nav {
-   min-height: 50px;
-   width: auto;
-
-   /* center align the menu */
-   text-align: center;
-}
-ul#nav li {
-   position: relative;
-   list-style: none;
-   height: 48px;
-   display: inline-block;
-}
-
-/* Links */
-ul#nav li a {
-
-/* 8px padding top + 8px padding bottom + 32px line-height = 48px */
-
-   display: inline-block;
-   padding: 8px 13px;
-   line-height: 32px;
-	text-decoration: none;
-   text-align: left;
-   color: #fff;
-
-	-webkit-transition: color .2s ease-in-out;
-	-moz-transition: color .2s ease-in-out;
-	-o-transition: color .2s ease-in-out;
-	-ms-transition: color .2s ease-in-out;
-	transition: color .2s ease-in-out;
+   transition: top 0.3s; 
 }
 
 
-ul#nav li a:hover { color: rgba(255, 255, 0, 0.675)}
+.nav {
+   font-weight: bold;
+}
 
 
 /* ------------------------------------------------------------------ */
-/* c. Spots Section
+/* b. Spots Section
 /* ------------------------------------------------------------------ */
+
+.logo {
+  height: 750px;
+  margin-top: -8%;
+}
+
 
 #spots {
-   background: #333;
+   background: rgb(85, 83, 83) ;
    padding-top: 96px;
    padding-bottom: 80px;
 }
 
 
-#spots h1 {
-   font: 30px/1.1em 'opensans-bold', sans-serif;
-   color: #fff;
-   letter-spacing: -2px;
-   margin: 0% auto 8px auto;
-   text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
-   text-align: center;
-}
-
 #dropdown-basic {
    padding: 15px;
+   position: relative;
+   border: 0;
+   border-radius: 10px;
+	padding: 15px 25px;
+	display: inline-block;
+   text-align: center;
+   font-weight: bold;
+   color: rgb(2, 2, 2);
+   background-color:#fad501;
 }
 
 #dropdown-basicSave {
@@ -170,51 +64,59 @@ ul#nav li a:hover { color: rgba(255, 255, 0, 0.675)}
    text-align: center;
 }
 
-.dotTop {
-   height: 550px;
-   width: 550px;
-   background-color: #bbb;
-   border-radius: 50%;
-   display: inline-block;
-   margin-top: 3%;
-   margin-left: 1%;
-   margin-right: 1%;
-   font-weight: bold;
-   font-size: xx-large;
- }
-
 .dot {
-   height: 500px;
-   width: 500px;
+   height: 650px;
+   width: 650px;
    background-color: #bbb;
    border-radius: 50%;
-   display: inline-block;
    margin-top: 5%;
-   margin-left: 1%;
-   margin-right: 1%;
  }
 
- .dateSpot {
-   text-align: center;
- }
 
- .movieOptions {
-    margin-top: 3%;
+ .options {
+    margin-top: 5%;
     text-align: center;
     color: #fff;
+    font-weight: bold;
  }
 
- .movieTitle {
-    margin-top: 14%;
-    margin-bottom: 3%;
+ .title {
+    padding-top: 125px;
     font-weight: bold;
     color: black;
+    text-align: center;
+    font-size: 100px;
  }
 
- .moviePoster {
-    height: 300px;
-    width: 200px;
+ .titleRes {
+   padding-top: 75px;
+   font-weight: bold;
+   color: black;
+   text-align: center;
+}
+
+
+ .poster {
+   margin-top: 2%;
+    height: 400px;
+    width: 250px;
+    border-radius: 5%;
  }
+
+ .resPhoto {
+ margin-top: 2%;
+   height: 400px;
+   width: 400px;
+   border-radius: 5%;
+}
+
+ .location {
+   margin-top: 2%;
+   font-weight: bold;
+   color: black;
+   text-align: center;
+   font-size: small;
+}
 
 
 /* ------------------------------------------------------------------ */
@@ -225,12 +127,14 @@ ul#nav li a:hover { color: rgba(255, 255, 0, 0.675)}
 #saved {
    padding-top: 96px;
    padding-bottom: 96px;
+   background: rgb(85, 83, 83) ;
 }
 
 
 #saved h1 {
    font: 30px/1.1em 'opensans-bold', sans-serif;
-   color: black;
+   font-weight: bold;
+   color: #fff;
    letter-spacing: -2px;
    margin: 0% auto 8px auto;
    text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
@@ -239,7 +143,7 @@ ul#nav li a:hover { color: rgba(255, 255, 0, 0.675)}
 
 
 /* ------------------------------------------------------------------ */
-/* d. Login Page
+/* d. Login/Sign Up Pages
 /* ------------------------------------------------------------------ */
 
 #login {
@@ -248,61 +152,51 @@ ul#nav li a:hover { color: rgba(255, 255, 0, 0.675)}
    padding-bottom: 80px;
 }
 
-.text-center {
-   text-align: center;
+#sign-up {
+   background: #bbb;
+   padding-top: 96px;
+   padding-bottom: 80px;
 }
 
-#food h2 {
-   font: 40px/28px 'opensans-bold', sans-serif;
-   color: #fff;
-   margin-bottom: 12%;
+.login-head {
+  font-weight: bold;
 }
-#food p {
-   line-height: 30px;
-   color: #878383;
-   text-align: justify;
+
+.form {
+   width: 300px;
+   font-weight: bold;
 }
 
 
-/* ------------------------------------------------------------------ */
-/* e. Footer
-/* ------------------------------------------------------------------ */
-
-footer {
-   padding-top: 48px;
-   margin-bottom: 48px;
-   color: #303030;
-   font-size: 14px;
-   text-align: center;
+.form-button {
+   width: 300px;
+   font-weight: bold;
    position: relative;
+   border: 0;
+   border-radius: 10px;
+	padding: 15px 25px;
+	display: inline-block;
+	text-align: center;
+   color: rgb(2, 2, 2);
+   background-color:#fad501;
 }
 
-footer a, footer a:visited { color: black; }
-footer a:hover, footer a:focus { color:  #11ABB0; }
+.button1:hover {
+   color:#000000;
+   background-color: #e2ae02;
+}
 
-/* copyright */
-footer .copyright {
-    margin: 0;
-    padding: 0;
- }
-footer .copyright li {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    line-height: 24px;
-    color: #878383;
+
+.label {
+   color: black;
 }
-.ie footer .copyright li {
-   display: inline;
+
+.title {
+   color: black;
+   font-weight: bold;
+   font-size: large;
 }
-footer .copyright li:before {
-    content: "\2022";
-    padding-left: 10px;
-    padding-right: 10px;
-}
-footer .copyright  li:first-child:before {
-    display: none;
-}
+
 
 
 /* 
@@ -518,7 +412,3 @@ header .banner-text h1 {
 
 
 }
-
-
-
-

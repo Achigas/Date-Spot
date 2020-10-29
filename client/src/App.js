@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Header from './Components/Header';
-import Spots from './Components/Spots';
-import Saved from './Components/Saved';
+import Navbar from './Components/Navbar'
+import Spots from './pages/Spots';
+import Saved from './pages/Saved';
 import Login from './Components/Login';
 import SignUp from './Components/Signup';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -11,17 +11,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App () {
    return (
-    <Router>
-       <>
-      <div className="App">
-        <Header/>
-        <Spots />
-        <Saved />
-        <Login />
-        <SignUp />
-      </div>
-      </>
-   </Router>
+  <Router>
+  <>
+  <Navbar/>
+  <Switch>
+    <Route exact path='/' component={Spots} />
+    <Route exact path='/Saved' component={Saved} />
+    <Route exact path='/Login' component={Login} />
+    <Route exact path='/Sign-Up' component={SignUp} />
+  </Switch>
+</>
+</Router>
       
     );
   }
