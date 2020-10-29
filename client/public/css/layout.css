@@ -34,7 +34,7 @@ html, body {
 .logo {
   height: 550px;
   margin-top: -8%;
-  margin-left: 23%;
+  margin-left: 24%;
 }
 
 
@@ -79,8 +79,8 @@ html, body {
  }
 
 .dot {
-   height: 550px;
-   width: 550px;
+   height: 500px;
+   width: 500px;
    background-color: #bbb;
    border-radius: 50%;
    display: inline-block;
@@ -91,6 +91,8 @@ html, body {
 
  .dateSpot {
    text-align: center;
+   color: rgb(238, 195, 2);
+   text-shadow: 0px 1px 3px rgba(22, 22, 22, 0.6);
  }
 
  .movieOptions {
@@ -179,9 +181,6 @@ footer {
    text-align: center;
    position: relative;
 }
-
-footer a, footer a:visited { color: black; }
-footer a:hover, footer a:focus { color:  #11ABB0; }
 
 /* copyright */
 footer .copyright {

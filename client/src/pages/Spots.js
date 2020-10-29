@@ -149,13 +149,6 @@ function Spots() {
             </Dropdown.Menu>
         </Dropdown>
         </div>
-        <div className="dateSpot">
-          <span className="dotTop">Fave <br></br> Movie Spot</span>
-          <span className="dotTop">Fave <br></br> Food Spot</span>
-        </div>
-        <div className="button">
-        <Button id="dropdown-basicSave" variant="warning">Save DateSpots</Button>{' '}
-        </div>
         <Container className="movieOptions">
           <h2>DateSpot Suggestions</h2>
           <CardColumns>
@@ -174,7 +167,7 @@ function Spots() {
           {Restaurants.map((restaurant) => {
             return (
               <Card className="dot" key={restaurant.id} border='dark'>
-                <Card.Body>
+                <Card.Body >
                 <Card.Title className="movieTitle">{restaurant.name}</Card.Title>
                 <Card.Img className="moviePoster" src={restaurant.image}></Card.Img>
                 <Card.Text className="movieTitle">{restaurant.location}</Card.Text>
