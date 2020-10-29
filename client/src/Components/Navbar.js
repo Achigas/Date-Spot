@@ -12,11 +12,11 @@ const AppNavbar = () => {
 
   return (
     <>
-      <Navbar className="navbar" variant='dark' expand='lg'>
+      <Navbar className="navbar" variant='dark' expand='lg' sticky='top'>
         <Container fluid>
           <Navbar.Toggle aria-controls='navbar' />
           <Navbar.Collapse id='navbar'>
-            <Nav className='ml-auto'>
+            <Nav className='ml-auto nav'>
               <Nav.Link as={Link} to='/'>
                 Find DateSpots
               </Nav.Link>

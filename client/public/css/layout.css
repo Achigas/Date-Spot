@@ -1,38 +1,29 @@
 /*
 =====================================================================
-/* ------------------------------------------------------------------ */
-/* a. General Styles
-/* ------------------------------------------------------------------ */
-
-* {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-}
-
-html, body {
-   margin: 0;
-   height: 100%;
-   padding: 0; 
-}
-
 
 /* ------------------------------------------------------------------ */
-/* b. Navbar Styles
+/* a. Navbar Styles
 /* ------------------------------------------------------------------ */
 
 
 .navbar {
    background: black;
+   position: fixed;
+   transition: top 0.3s; 
+}
+
+
+.nav {
+   font-weight: bold;
 }
 
 
 /* ------------------------------------------------------------------ */
-/* c. Spots Section
+/* b. Spots Section
 /* ------------------------------------------------------------------ */
 
 .logo {
-  height: 550px;
+  height: 750px;
   margin-top: -8%;
 }
 
@@ -73,53 +64,59 @@ html, body {
    text-align: center;
 }
 
-.dotTop {
-   height: 450px;
-   width: 450px;
-   background-color: #bbb;
-   border-radius: 50%;
-   display: inline-block;
-   margin-top: 3%;
-   margin-left: 1%;
-   margin-right: 1%;
-   font-weight: bold;
-   font-size: xx-large;
- }
-
 .dot {
-   height: 500px;
-   width: 500px;
+   height: 650px;
+   width: 650px;
    background-color: #bbb;
    border-radius: 50%;
-   display: inline-block;
    margin-top: 5%;
-   margin-left: 1%;
-   margin-right: 1%;
  }
 
- .dateSpot {
-   text-align: center;
-   color: rgb(238, 195, 2);
-   text-shadow: 0px 1px 3px rgba(22, 22, 22, 0.6);
- }
 
- .movieOptions {
-    margin-top: 3%;
+ .options {
+    margin-top: 5%;
     text-align: center;
     color: #fff;
+    font-weight: bold;
  }
 
- .movieTitle {
-    margin-top: 14%;
-    margin-bottom: 3%;
+ .title {
+    padding-top: 125px;
     font-weight: bold;
     color: black;
+    text-align: center;
+    font-size: 100px;
  }
 
- .moviePoster {
-    height: 300px;
-    width: 200px;
+ .titleRes {
+   padding-top: 75px;
+   font-weight: bold;
+   color: black;
+   text-align: center;
+}
+
+
+ .poster {
+   margin-top: 2%;
+    height: 400px;
+    width: 250px;
+    border-radius: 5%;
  }
+
+ .resPhoto {
+ margin-top: 2%;
+   height: 400px;
+   width: 400px;
+   border-radius: 5%;
+}
+
+ .location {
+   margin-top: 2%;
+   font-weight: bold;
+   color: black;
+   text-align: center;
+   font-size: small;
+}
 
 
 /* ------------------------------------------------------------------ */
@@ -136,6 +133,7 @@ html, body {
 
 #saved h1 {
    font: 30px/1.1em 'opensans-bold', sans-serif;
+   font-weight: bold;
    color: #fff;
    letter-spacing: -2px;
    margin: 0% auto 8px auto;

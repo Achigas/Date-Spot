@@ -4,9 +4,12 @@ function Saved() {
   return (
     <section className="my-5" id="saved">
    <h1>Your Saved Spots</h1>
-  <div className="dateSpot">
-  <span className="dotTop"></span>
-  <span className="dotTop"></span>
+  <div style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+              }}>
+  <div className="dot"> </div>
   </div>
   </section>
   );

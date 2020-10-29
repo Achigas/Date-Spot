@@ -157,34 +157,52 @@ function Spots() {
             </Dropdown.Menu>
         </Dropdown>
         </div>
-        <Container className="movieOptions">
-          <h2>DateSpot Suggestions</h2>
-          <CardColumns>
+          <h2 className= "options">DateSpot Suggestions</h2>
           {Movies.map((movie) => {
             return (
-              <Card className="dot" key={movie.movieId} border='dark'>
-                <Card.Body>
-                <span><Card.Title className="movieTitle">{movie.movieTitle}</Card.Title>
-                  <Card.Img className="moviePoster" src={movie.moviePoster}></Card.Img></span>
-                </Card.Body>
-              </Card>
+              <Container key={movie.movieId} >
+              <div style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+              }} >
+              <div className="dot">
+                <h3 className="title">{movie.movieTitle}</h3>
+                <div style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+              }} >
+                  <img className="poster" src={movie.moviePoster} alt="Movie Poster"/>
+                  </div>
+              </div> 
+              </div>
+              </Container>
             )
           })}
-          </CardColumns>
-          <CardColumns>
           {Restaurants.map((restaurant) => {
             return (
-              <Card className="dot" key={restaurant.id} border='dark'>
-                <Card.Body >
-                <Card.Title className="movieTitle">{restaurant.name}</Card.Title>
-                <Card.Img className="moviePoster" src={restaurant.image}></Card.Img>
-                <Card.Text className="movieTitle">{restaurant.location}</Card.Text>
-                </Card.Body>
-              </Card>
+              <Container key={restaurant.id}>
+              <div style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+              }} >
+              <div className="dot" >
+                <h3 className="titleRes">{restaurant.name}</h3>
+                <div style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+              }} >
+                <img className="resPhoto" src={restaurant.image} alt="Restaurant Photo"/>
+                </div>
+                <h5 className="location">{restaurant.location}</h5>
+              </div>
+              </div>
+              </Container>
             )
           })}
-          </CardColumns>
-      </Container>
   </section>
   );
 }
