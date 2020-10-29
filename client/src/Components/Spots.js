@@ -99,7 +99,7 @@ function Spots() {
       const randomRest = Math.floor(Math.random() * Math.floor(restaurantData.length))+1
       const selectionRestaurant = restaurantData[randomRest]
       arrayRestaurants.push(selectionRestaurant)
-      arrayRestaurants.push(restaurantData[0])
+      arrayRestaurants.push(restaurantData[0]) 
     } catch (err) {
       console.error(err);
     }
