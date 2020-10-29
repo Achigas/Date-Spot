@@ -95,12 +95,12 @@ export const searchPopularMovies = () => {
 
 //HotSpot
 export const getHotSpot = () => {
-  return fetch (`https://developers.zomato.com/api/v2.1/search?entity_id=280&entity_type=city&start=5&count=1&collection_id=1&sort=rating&order=desc
+  return fetch (`https://developers.zomato.com/api/v2.1/search?entity_id=280&entity_type=city&collection_id=1&sort=rating&order=desc
   `, config)
 }
 
 export const getCheapHotSpot = () => {
-  return fetch (`https://developers.zomato.com/api/v2.1/search?entity_id=280&entity_type=city&start=5&count=1&collection_id=434
+  return fetch (`https://developers.zomato.com/api/v2.1/search?entity_id=280&entity_type=city&collection_id=434
   `, config)
 }
 

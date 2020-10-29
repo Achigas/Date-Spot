@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Dropdown, Container, Card, Button, CardColumns } from 'react-bootstrap';
+import { DropdownButton, Dropdown, Container, Card, Button, CardColumns } from 'react-bootstrap';
 import { 
     searchNowPlayingMovies,
     searchPopularMovies,
@@ -21,7 +21,7 @@ function Spots() {
   const [Restaurants, setRestaurants] = useState([]);
   
   const handleFormSubmit = async (event) => {
-    event.preventDefault();
+    console.log(event)
     let arrayMovies = []
     let arrayRestaurants = []
 
@@ -123,6 +123,7 @@ function Spots() {
 
     const randomCheapRest = Math.floor(Math.random() * Math.floor(cheaprestaurantData.length))
     const selectionCheapRestaurant = cheaprestaurantData[randomCheapRest]
+    console.log(selectionCheapRestaurant)
     arrayRestaurants.push(selectionCheapRestaurant)
     setRestaurants(arrayRestaurants); 
   } catch (err) {
@@ -134,16 +135,13 @@ function Spots() {
     <>
     <section className="my-5" id="spots">
         <div className="button">
-        <Dropdown>
-          <Dropdown.Toggle  className="btn-warning" id="dropdown-basic">
-            which type of date are you feeling?
-          </Dropdown.Toggle>
-            <Dropdown.Menu alignCenter>
-              <Dropdown.Item className="dropdownItem" href="#/action-1">Action</Dropdown.Item>
-              <Dropdown.Item className="dropdownItem"  href="#/action-2">Another action</Dropdown.Item>
-              <Dropdown.Item className="dropdownItem"  href="#/action-3">Something else</Dropdown.Item>
+          <DropdownButton  title="Which type of date are you feeling?" className="btn-warning" id="dropdown-basic" onSelect={handleFormSubmit}>
+            <Dropdown.Menu aligncenter="true">
+              <Dropdown.Item className="dropdownItem" eventKey="HotSpot">HotSpot</Dropdown.Item>
+              <Dropdown.Item className="dropdownItem" eventKey="CheapSpot">CheapSpot</Dropdown.Item>
+              <Dropdown.Item className="dropdownItem"  eventKey="SweetSpot">SweetSpot</Dropdown.Item>
             </Dropdown.Menu>
-        </Dropdown>
+        </DropdownButton >
         </div>
         <div className="dateSpot">
           <span className="dotTop">Fave <br></br> Movie Spot</span>
