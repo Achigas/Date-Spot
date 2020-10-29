@@ -54,7 +54,11 @@ const SignUp = () => {
   return (
     <>
     <div id="sign-up">
-    <div className="login-head" >
+    <div className="login-head" style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }} >
       <h2>Sign Up</h2><br></br>
       </div>
       {/* This is needed for the validation functionality above */}
@@ -63,7 +67,11 @@ const SignUp = () => {
         <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
           Something went wrong with your signup!
         </Alert>
-
+       <div style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}>
         <Form.Group className="form">
           <Form.Label htmlFor='username'>Username:</Form.Label>
           <Form.Control
@@ -76,7 +84,13 @@ const SignUp = () => {
           />
           <Form.Control.Feedback type='invalid'>Username is required!</Form.Control.Feedback>
         </Form.Group>
+        </div>
 
+       <div style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}>
         <Form.Group className="form">
           <Form.Label htmlFor='email'>Email:</Form.Label>
           <Form.Control
@@ -89,7 +103,12 @@ const SignUp = () => {
           />
           <Form.Control.Feedback type='invalid'>Email is required!</Form.Control.Feedback>
         </Form.Group>
-
+        </div>
+        <div style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}>
         <Form.Group className="form">
           <Form.Label htmlFor='password'>Password:</Form.Label>
           <Form.Control
@@ -102,6 +121,12 @@ const SignUp = () => {
           />
           <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
         </Form.Group>
+        </div><br></br>
+        <div style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}>
         <Form.Group className="form">
         <Form.Label>
           Choose your city: 
@@ -112,7 +137,13 @@ const SignUp = () => {
             <option value="291">Miami</option>
             <option value="280">New York City</option>
           </select>
-        </Form.Group><br></br>
+        </Form.Group>
+        </div><br></br>
+        <div style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}>
         <Button
         className="form"
           disabled={!(userFormData.username && userFormData.email && userFormData.password)}
@@ -120,6 +151,7 @@ const SignUp = () => {
           variant='warning'>
           Submit
         </Button>
+        </div>
       </Form>
       </div>
     </>

@@ -50,14 +50,23 @@ const Login = () => {
   return (
     <>
     <div id="login">
-      <div className="login-head" >
+      <div className="login-head" style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }} >
       <h2>Log In</h2><br></br>
       </div>
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
           Something went wrong with your login credentials!
         </Alert>
-        <Form.Group className="form">
+        <div style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }} >
+        <Form.Group className="form" >
           <Form.Label htmlFor='email'>Email:</Form.Label>
           <Form.Control
             type='text'
@@ -69,7 +78,12 @@ const Login = () => {
           />
           <Form.Control.Feedback type='invalid'>Email is required!</Form.Control.Feedback>
         </Form.Group>
-
+        </div>
+        <div style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }} >
         <Form.Group className="form">
           <Form.Label htmlFor='password'>Password:</Form.Label>
           <Form.Control
@@ -81,14 +95,17 @@ const Login = () => {
             required
           />
           <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
-        </Form.Group><br></br>
+        </Form.Group>
+        </div><br></br>
+        <div className="button">
         <Button
-        className="form"
+         className="form-button"
           disabled={!(userFormData.email && userFormData.password)}
           type='submit'
-          variant='warning'>
+         >
           Submit
         </Button>
+        </div>
       </Form>
       </div>
     </>

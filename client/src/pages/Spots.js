@@ -134,12 +134,20 @@ function Spots() {
 
   return (
     <section className="my-5" id="spots">
-      <div>
+      <div style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }} >
       <img className="logo"  src={logo} alt="DateSpot Logo" />
       </div>
-        <div className="button">
+        <div style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}>
         <Dropdown>
-          <Dropdown.Toggle  onClick={handleFormSubmit}  className="btn-warning" id="dropdown-basic">
+          <Dropdown.Toggle  onClick={handleFormSubmit}  id="dropdown-basic">
             What type of date are you feeling?
           </Dropdown.Toggle>
             <Dropdown.Menu alignCenter>

@@ -34,7 +34,6 @@ html, body {
 .logo {
   height: 550px;
   margin-top: -8%;
-  margin-left: 24%;
 }
 
 
@@ -47,6 +46,15 @@ html, body {
 
 #dropdown-basic {
    padding: 15px;
+   position: relative;
+   border: 0;
+   border-radius: 10px;
+	padding: 15px 25px;
+	display: inline-block;
+   text-align: center;
+   font-weight: bold;
+   color: rgb(2, 2, 2);
+   background-color:#fad501;
 }
 
 #dropdown-basicSave {
@@ -153,58 +161,44 @@ html, body {
 }
 
 .login-head {
-   text-align: center;
   font-weight: bold;
 }
 
 .form {
    width: 300px;
-   margin-left: 40%;
    font-weight: bold;
 }
 
-.login-button {
-   background-color: black;
-   border-radius: 10%;
-}
 
-
-/* ------------------------------------------------------------------ */
-/* e. Footer
-/* ------------------------------------------------------------------ */
-
-footer {
-   padding-top: 48px;
-   margin-bottom: 48px;
-   color: #303030;
-   font-size: 14px;
-   text-align: center;
+.form-button {
+   width: 300px;
+   font-weight: bold;
    position: relative;
+   border: 0;
+   border-radius: 10px;
+	padding: 15px 25px;
+	display: inline-block;
+	text-align: center;
+   color: rgb(2, 2, 2);
+   background-color:#fad501;
 }
 
-/* copyright */
-footer .copyright {
-    margin: 0;
-    padding: 0;
- }
-footer .copyright li {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    line-height: 24px;
-    color: #878383;
+.button1:hover {
+   color:#000000;
+   background-color: #e2ae02;
 }
-.ie footer .copyright li {
-   display: inline;
+
+
+.label {
+   color: black;
 }
-footer .copyright li:before {
-    content: "\2022";
-    padding-left: 10px;
-    padding-right: 10px;
+
+.title {
+   color: black;
+   font-weight: bold;
+   font-size: large;
 }
-footer .copyright  li:first-child:before {
-    display: none;
-}
+
 
 
 /* 
