@@ -107,9 +107,9 @@ function Spots() {
             </Dropdown.Menu>
         </Dropdown>
         </div>
-        <div className="dateSpot">
-          <span className="dotTop">Fave <br></br> Movie Spot</span>
-          <span className="dotTop">Fave <br></br> Food Spot</span>
+        <div className="dateSpot" >
+          <span  className="dotTop">Fave <br></br> Movie Spot</span>
+          <span  className="dotTop">Fave <br></br> Food Spot</span>
         </div>
         <div className="button">
         <Button id="dropdown-basicSave" class="button1" variant="warning">Save DateSpots</Button>{' '}

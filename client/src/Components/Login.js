@@ -5,7 +5,8 @@ function Login () {
     return (
       <section id="login">
      <div>
-        <h1 class="text-center font-italic">Placeholder for logo <br></br> DateSpot</h1>
+     
+        <h1 class="text-center font-italic">Logo Placeholder<br></br> DateSpot</h1>
           <p class="text-center lead">Find your next date idea!</p>
       </div> 
       <Container className="movieOptions">
