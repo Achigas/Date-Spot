@@ -19,7 +19,7 @@ Date Spot is an application that pulls up restuarants and ideas in your area to 
 [DateSpot]()
 
 ## Screenshots
-![DateSpot](./public/images/Mylingual.png)
+![DateSpot]()
 
 ## Setup
 * Clone GitHub repository 
@@ -41,12 +41,13 @@ Date Spot is an application that pulls up restuarants and ideas in your area to 
 ## Inspiration
 To help people find local date spots when they are feeling indecisive.
 
-This project idea was created by Lauren Euge (leuge) and coded by Briana daMota, Rochelle Ruiz, Lauren Euge, and Alex Chigas. 
+This project idea was created by Lauren Euge, Briana daMota, Rochelle Ruiz, Lauren Euge, and Alex Chigas. 
 
 ## Future Developments
-* Animation for activity
+* Animation for results
 * Mobile Accessibility with carasouls
 * Add other date ideas aside from restaurants
+* User accessibility 
 
 
 ## Contact
