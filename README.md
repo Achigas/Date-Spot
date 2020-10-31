@@ -19,7 +19,7 @@ Date Spot is an application that pulls up restuarants and ideas in your area to 
 [DateSpot]()
 
 ## Screenshots
-![DateSpot]()
+![DateSpot](./client/source/images/header-background.png)
 
 ## Setup
 * Clone GitHub repository 
