@@ -72,7 +72,6 @@
  .options {
     text-align: center;
     font-weight: bold;
-    font: 30px/1.1em 'opensans-bold', sans-serif;
     color: #fff;
     margin: 5% auto 8px auto;
  }
@@ -119,7 +118,7 @@
 
 
 #saved {
-   padding-top: .5px;
+   padding-top: 45px;
    padding-bottom: 96px;
    background: rgb(85, 83, 83) ;
 }
@@ -127,9 +126,7 @@
 .optionsSaved {
    text-align: center;
    font-weight: bold;
-   font: 30px/1.1em 'opensans-bold', sans-serif;
    color: #fff;
-   margin-top: 0%;
 }
 
 
