@@ -39,29 +39,25 @@
    padding: 15px;
    position: relative;
    border: 0;
-   border-radius: 10px;
 	padding: 15px 25px;
 	display: inline-block;
    text-align: center;
    font-weight: bold;
+   font-size: x-large;
    color: rgb(2, 2, 2);
    background-color:#fad501;
 }
 
-#dropdown-basicSave {
-   padding: 15px;
-   margin-top: 3%;
+
+.dropdown-menu {
+   left: 50% !important;
+   transform: translateX(-50%) !important;
+   top: 100% !important;
 }
 
-
-.dropdownItem {
-  margin-right: 3%;
-   color: #fff;
-
-}
-
-.button  {
+.btn-warning  {
    text-align: center;
+   border-radius: 10px;
 }
 
 .dot {
@@ -69,53 +65,51 @@
    width: 650px;
    background-color: #bbb;
    border-radius: 50%;
-   margin-top: 5%;
+   margin-top: 2%;
  }
 
 
  .options {
-    margin-top: 5%;
     text-align: center;
-    color: #fff;
     font-weight: bold;
+    font: 30px/1.1em 'opensans-bold', sans-serif;
+    color: #fff;
+    margin: 5% auto 8px auto;
  }
 
- .title {
-    padding-top: 125px;
-    font-weight: bold;
-    color: black;
-    text-align: center;
-    font-size: 100px;
- }
 
  .titleRes {
    padding-top: 75px;
    font-weight: bold;
    color: black;
    text-align: center;
+   padding-right: 120px;
+   padding-left: 120px;
 }
 
 
  .poster {
    margin-top: 2%;
-    height: 400px;
-    width: 250px;
+    height: 410px;
+    width: 300px;
     border-radius: 5%;
  }
 
  .resPhoto {
- margin-top: 2%;
+   margin-top: 2%;
    height: 400px;
    width: 400px;
    border-radius: 5%;
 }
 
  .location {
-   margin-top: 2%;
+   margin-top: 1.5%;
    font-weight: bold;
    color: black;
    text-align: center;
-   font-size: small;
+   font-size: medium;
+   padding-right: 120px;
+   padding-left: 120px;
 }
 
 
@@ -125,20 +119,17 @@
 
 
 #saved {
-   padding-top: 96px;
+   padding-top: .5px;
    padding-bottom: 96px;
    background: rgb(85, 83, 83) ;
 }
 
-
-#saved h1 {
-   font: 30px/1.1em 'opensans-bold', sans-serif;
-   font-weight: bold;
-   color: #fff;
-   letter-spacing: -2px;
-   margin: 0% auto 8px auto;
-   text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
+.optionsSaved {
    text-align: center;
+   font-weight: bold;
+   font: 30px/1.1em 'opensans-bold', sans-serif;
+   color: #fff;
+   margin-top: 0%;
 }
 
 
@@ -158,15 +149,15 @@
    padding-bottom: 80px;
 }
 
-.login-head {
-  font-weight: bold;
-}
 
 .form {
    width: 300px;
    font-weight: bold;
 }
 
+.button {
+   text-align: center;
+}
 
 .form-button {
    width: 300px;
@@ -178,24 +169,10 @@
 	display: inline-block;
 	text-align: center;
    color: rgb(2, 2, 2);
-   background-color:#fad501;
-}
-
-.button1:hover {
-   color:#000000;
-   background-color: #e2ae02;
 }
 
 
-.label {
-   color: black;
-}
 
-.title {
-   color: black;
-   font-weight: bold;
-   font-size: large;
-}
 
 
 

@@ -55,7 +55,7 @@ const Login = () => {
           justifyContent: "center",
           alignItems: "center"
         }} >
-      <h2>Log In</h2><br></br>
+      <h2><strong>Log In</strong></h2><br></br>
       </div>
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
@@ -102,8 +102,9 @@ const Login = () => {
          className="form-button"
           disabled={!(userFormData.email && userFormData.password)}
           type='submit'
+          variant='primary'
          >
-          Submit
+          <strong>Submit</strong>
         </Button>
         </div>
       </Form>

@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { DropdownButton, Dropdown, Container, Card, Button, CardColumns } from 'react-bootstrap';
+import { DropdownButton, Dropdown, Container, Button} from 'react-bootstrap';
 import { 
     searchNowPlayingMovies,
     searchPopularMovies,
@@ -190,10 +190,10 @@ function Spots() {
           alignItems: "center"
         }}>
           <DropdownButton  title="Which type of date are you feeling?" className="btn-warning" id="dropdown-basic" onSelect={handleFormSubmit}>
-            <Dropdown.Menu aligncenter="true">
-              <Dropdown.Item className="dropdownItem" eventKey="HotSpot">HotSpot</Dropdown.Item>
-              <Dropdown.Item className="dropdownItem" eventKey="CheapSpot">CheapSpot</Dropdown.Item>
-              <Dropdown.Item className="dropdownItem"  eventKey="SweetSpot">SweetSpot</Dropdown.Item>
+            <Dropdown.Menu >
+              <Dropdown.Item eventKey="HotSpot"><strong>HotSpot</strong></Dropdown.Item>
+              <Dropdown.Item eventKey="CheapSpot"><strong>CheapSpot</strong></Dropdown.Item>
+              <Dropdown.Item eventKey="SweetSpot"><strong>SweetSpot</strong></Dropdown.Item>
             </Dropdown.Menu>
         </DropdownButton >
         </div>
@@ -207,7 +207,7 @@ function Spots() {
                 alignItems: "center"
               }} >
               <div className="dot">
-                <h3 className="title">{movie.movieTitle}</h3>
+                <h3 className="titleRes">{movie.movieTitle}</h3>
                 <div style={{
                 display: "flex",
                 justifyContent: "center",
@@ -235,7 +235,7 @@ function Spots() {
                 justifyContent: "center",
                 alignItems: "center"
               }} >
-                <img className="resPhoto" src={restaurant.image} alt="Restaurant Photo"/>
+                <img className="resPhoto" src={restaurant.image} alt="Restaurant"/>
                 </div>
                 <h5 className="location">{restaurant.location}</h5>
               </div>

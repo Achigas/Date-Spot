@@ -59,7 +59,7 @@ const SignUp = () => {
           justifyContent: "center",
           alignItems: "center"
         }} >
-      <h2>Sign Up</h2><br></br>
+      <h2><strong>Sign Up</strong></h2><br></br>
       </div>
       {/* This is needed for the validation functionality above */}
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
@@ -148,8 +148,8 @@ const SignUp = () => {
         className="form"
           disabled={!(userFormData.username && userFormData.email && userFormData.password)}
           type='submit'
-          variant='warning'>
-          Submit
+          variant='primary'>
+          <strong>Submit</strong>
         </Button>
         </div>
       </Form>
